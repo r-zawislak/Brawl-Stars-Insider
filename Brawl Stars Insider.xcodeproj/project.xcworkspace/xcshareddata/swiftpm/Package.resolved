@@ -10,12 +10,21 @@
       }
     },
     {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher",
+      "state" : {
+        "revision" : "415b1d97fb38bda1e5a6b2dde63354720832110b",
+        "version" : "7.6.1"
+      }
+    },
+    {
       "identity" : "moya",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Moya/Moya",
       "state" : {
-        "branch" : "development",
-        "revision" : "4660d0effed90de185e00fb72ad451e499ad5d10"
+        "revision" : "c263811c1f3dbf002be9bd83107f7cdc38992b26",
+        "version" : "15.0.3"
       }
     },
     {

@@ -8,39 +8,51 @@
 
 /* Begin PBXBuildFile section */
 		7A323C9F299B940000E61906 /* Brawl_Stars_InsiderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323C9E299B940000E61906 /* Brawl_Stars_InsiderApp.swift */; };
-		7A323CA1299B940000E61906 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CA0299B940000E61906 /* ContentView.swift */; };
+		7A323CA1299B940000E61906 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CA0299B940000E61906 /* EventsView.swift */; };
 		7A323CA3299B940100E61906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A323CA2299B940100E61906 /* Assets.xcassets */; };
 		7A323CA6299B940100E61906 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A323CA5299B940100E61906 /* Preview Assets.xcassets */; };
 		7A323CB0299B940100E61906 /* Brawl_Stars_InsiderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CAF299B940100E61906 /* Brawl_Stars_InsiderTests.swift */; };
 		7A323CBA299B940100E61906 /* Brawl_Stars_InsiderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CB9299B940100E61906 /* Brawl_Stars_InsiderUITests.swift */; };
 		7A323CBC299B940100E61906 /* Brawl_Stars_InsiderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CBB299B940100E61906 /* Brawl_Stars_InsiderUITestsLaunchTests.swift */; };
-		7A323CCB299BA1C800E61906 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CCA299BA1C800E61906 /* Event.swift */; };
-		7A323CCD299BA21E00E61906 /* EventMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CCC299BA21E00E61906 /* EventMode.swift */; };
-		7A323CCF299BA26E00E61906 /* Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CCE299BA26E00E61906 /* Modifier.swift */; };
-		7A323CD1299BA31E00E61906 /* ScheduledEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CD0299BA31E00E61906 /* ScheduledEvent.swift */; };
-		7A323CD7299BB2EE00E61906 /* AsyncMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 7A323CD6299BB2EE00E61906 /* AsyncMoya */; };
-		7A323CD9299BB2EE00E61906 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7A323CD8299BB2EE00E61906 /* Moya */; };
 		7A323CDB299BB30800E61906 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CDA299BB30800E61906 /* Endpoint.swift */; };
-		7A323CDD299BB48B00E61906 /* BrawlStarsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CDC299BB48B00E61906 /* BrawlStarsEndpoint.swift */; };
 		7A323CE1299BB5E400E61906 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CE0299BB5E400E61906 /* Logger.swift */; };
 		7A323CE4299BB61D00E61906 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CE3299BB61D00E61906 /* Data.swift */; };
 		7A323CE6299BB69000E61906 /* MoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CE5299BB69000E61906 /* MoyaProvider.swift */; };
-		7A323CEA299BBA7900E61906 /* Brawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CE9299BBA7900E61906 /* Brawler.swift */; };
-		7A323CEC299BD01400E61906 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CEB299BD01400E61906 /* Season.swift */; };
-		7A323CEE299BD19400E61906 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CED299BD19400E61906 /* Item.swift */; };
 		7A323CF0299BD27300E61906 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CEF299BD27300E61906 /* ListResponse.swift */; };
 		7A323CF2299BD55400E61906 /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CF1299BD55400E61906 /* JSONDecoder.swift */; };
 		7A323CF4299BD58400E61906 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CF3299BD58400E61906 /* DateFormatter.swift */; };
-		7A323CF6299BDEA900E61906 /* RankingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CF5299BDEA900E61906 /* RankingItem.swift */; };
-		7A323CF8299BDECD00E61906 /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CF7299BDECD00E61906 /* Club.swift */; };
-		7A323CFA299BDEDE00E61906 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CF9299BDEDE00E61906 /* Icon.swift */; };
-		7A323CFC299BDF4000E61906 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CFB299BDF4000E61906 /* Battle.swift */; };
-		7A323CFE299BDF6400E61906 /* BattleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CFD299BDF6400E61906 /* BattleType.swift */; };
-		7A323D00299BDFC000E61906 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CFF299BDFC000E61906 /* Player.swift */; };
-		7A323D02299BE00100E61906 /* PlayerBrawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323D01299BE00100E61906 /* PlayerBrawler.swift */; };
-		7A323D04299BE04100E61906 /* BattleLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323D03299BE04100E61906 /* BattleLog.swift */; };
-		7A323D06299BE1ED00E61906 /* BattleResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323D05299BE1ED00E61906 /* BattleResult.swift */; };
-		7A323D08299BE29B00E61906 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323D07299BE29B00E61906 /* Team.swift */; };
+		7A43C26E299E701000567700 /* BrawlifyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C26D299E701000567700 /* BrawlifyEndpoint.swift */; };
+		7A43C271299E790100567700 /* PlayerIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C270299E790100567700 /* PlayerIcon.swift */; };
+		7A43C273299E790B00567700 /* ClubIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C272299E790B00567700 /* ClubIcon.swift */; };
+		7A43C275299E79FF00567700 /* GetIconsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C274299E79FF00567700 /* GetIconsResponse.swift */; };
+		7A43C278299E8ECB00567700 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7A43C277299E8ECB00567700 /* Kingfisher */; };
+		7A43C27B299EB07300567700 /* AppPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C27A299EB07300567700 /* AppPath.swift */; };
+		7A43C27D299EB0CE00567700 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C27C299EB0CE00567700 /* Store.swift */; };
+		7A43C27F299EB12500567700 /* IconsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C27E299EB12500567700 /* IconsRepository.swift */; };
+		7A43C281299EC1D800567700 /* GetEventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C280299EC1D800567700 /* GetEventsResponse.swift */; };
+		7A43C283299EC7C400567700 /* Stat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C282299EC7C400567700 /* Stat.swift */; };
+		7A43C286299EC7F100567700 /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C285299EC7F100567700 /* GameMode.swift */; };
+		7A43C288299EC84800567700 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C287299EC84800567700 /* Environment.swift */; };
+		7A43C28D299EC8D800567700 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C28C299EC8D800567700 /* Map.swift */; };
+		7A43C28F299ECB2000567700 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C28E299ECB2000567700 /* Event.swift */; };
+		7A43C291299ECB2D00567700 /* Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C290299ECB2D00567700 /* Slot.swift */; };
+		7A43C294299ECC1B00567700 /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C293299ECC1B00567700 /* EventsViewModel.swift */; };
+		7A43C296299ED12400567700 /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C295299ED12400567700 /* EventRow.swift */; };
+		7A43C298299EF2AB00567700 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C297299EF2AB00567700 /* Color.swift */; };
+		7A43C29B299EFB9900567700 /* EventMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C29A299EFB9900567700 /* EventMock.swift */; };
+		7A43C29D299EFC5C00567700 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C29C299EFC5C00567700 /* String.swift */; };
+		7A43C2A0299FB16D00567700 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 7A43C29F299FB16D00567700 /* CombineMoya */; };
+		7A43C2A2299FB16D00567700 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7A43C2A1299FB16D00567700 /* Moya */; };
+		7A43C2A4299FB4B200567700 /* AnyPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2A3299FB4B200567700 /* AnyPublisher.swift */; };
+		7A43C2A8299FC35B00567700 /* BrawlerStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2A7299FC35B00567700 /* BrawlerStatView.swift */; };
+		7A43C2AB299FC51E00567700 /* Brawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2AA299FC51E00567700 /* Brawler.swift */; };
+		7A43C2AD299FC53E00567700 /* BrawlerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2AC299FC53E00567700 /* BrawlerItem.swift */; };
+		7A43C2AF299FC5BE00567700 /* BrawlerRarity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2AE299FC5BE00567700 /* BrawlerRarity.swift */; };
+		7A43C2B1299FC5C700567700 /* BrawlerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2B0299FC5C700567700 /* BrawlerClass.swift */; };
+		7A43C2B3299FC68000567700 /* BrawlerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2B2299FC68000567700 /* BrawlerMock.swift */; };
+		7A43C2B5299FC6A900567700 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2B4299FC6A900567700 /* Int.swift */; };
+		7A43C2B9299FC8B200567700 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2B8299FC8B200567700 /* Icons.swift */; };
+		7A43C2BB299FD16600567700 /* EventRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2BA299FD16600567700 /* EventRowViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +75,7 @@
 /* Begin PBXFileReference section */
 		7A323C9B299B940000E61906 /* Brawl Stars Insider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brawl Stars Insider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A323C9E299B940000E61906 /* Brawl_Stars_InsiderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brawl_Stars_InsiderApp.swift; sourceTree = "<group>"; };
-		7A323CA0299B940000E61906 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7A323CA0299B940000E61906 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		7A323CA2299B940100E61906 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A323CA5299B940100E61906 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A323CAB299B940100E61906 /* Brawl Stars InsiderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Brawl Stars InsiderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,31 +83,42 @@
 		7A323CB5299B940100E61906 /* Brawl Stars InsiderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Brawl Stars InsiderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A323CB9299B940100E61906 /* Brawl_Stars_InsiderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brawl_Stars_InsiderUITests.swift; sourceTree = "<group>"; };
 		7A323CBB299B940100E61906 /* Brawl_Stars_InsiderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brawl_Stars_InsiderUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		7A323CCA299BA1C800E61906 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = SOURCE_ROOT; };
-		7A323CCC299BA21E00E61906 /* EventMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMode.swift; sourceTree = "<group>"; };
-		7A323CCE299BA26E00E61906 /* Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifier.swift; sourceTree = "<group>"; };
-		7A323CD0299BA31E00E61906 /* ScheduledEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduledEvent.swift; sourceTree = "<group>"; };
 		7A323CDA299BB30800E61906 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		7A323CDC299BB48B00E61906 /* BrawlStarsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrawlStarsEndpoint.swift; sourceTree = "<group>"; };
 		7A323CE0299BB5E400E61906 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		7A323CE3299BB61D00E61906 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		7A323CE5299BB69000E61906 /* MoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaProvider.swift; sourceTree = "<group>"; };
-		7A323CE9299BBA7900E61906 /* Brawler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brawler.swift; sourceTree = "<group>"; };
-		7A323CEB299BD01400E61906 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
-		7A323CED299BD19400E61906 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		7A323CEF299BD27300E61906 /* ListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
 		7A323CF1299BD55400E61906 /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
 		7A323CF3299BD58400E61906 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
-		7A323CF5299BDEA900E61906 /* RankingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingItem.swift; sourceTree = "<group>"; };
-		7A323CF7299BDECD00E61906 /* Club.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Club.swift; sourceTree = "<group>"; };
-		7A323CF9299BDEDE00E61906 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
-		7A323CFB299BDF4000E61906 /* Battle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
-		7A323CFD299BDF6400E61906 /* BattleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleType.swift; sourceTree = "<group>"; };
-		7A323CFF299BDFC000E61906 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		7A323D01299BE00100E61906 /* PlayerBrawler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBrawler.swift; sourceTree = "<group>"; };
-		7A323D03299BE04100E61906 /* BattleLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleLog.swift; sourceTree = "<group>"; };
-		7A323D05299BE1ED00E61906 /* BattleResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleResult.swift; sourceTree = "<group>"; };
-		7A323D07299BE29B00E61906 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		7A43C26D299E701000567700 /* BrawlifyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrawlifyEndpoint.swift; sourceTree = "<group>"; };
+		7A43C270299E790100567700 /* PlayerIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerIcon.swift; sourceTree = "<group>"; };
+		7A43C272299E790B00567700 /* ClubIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubIcon.swift; sourceTree = "<group>"; };
+		7A43C274299E79FF00567700 /* GetIconsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetIconsResponse.swift; sourceTree = "<group>"; };
+		7A43C27A299EB07300567700 /* AppPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPath.swift; sourceTree = "<group>"; };
+		7A43C27C299EB0CE00567700 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		7A43C27E299EB12500567700 /* IconsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsRepository.swift; sourceTree = "<group>"; };
+		7A43C280299EC1D800567700 /* GetEventsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEventsResponse.swift; sourceTree = "<group>"; };
+		7A43C282299EC7C400567700 /* Stat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stat.swift; sourceTree = "<group>"; };
+		7A43C285299EC7F100567700 /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		7A43C287299EC84800567700 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		7A43C28C299EC8D800567700 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		7A43C28E299ECB2000567700 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		7A43C290299ECB2D00567700 /* Slot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Slot.swift; sourceTree = "<group>"; };
+		7A43C293299ECC1B00567700 /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		7A43C295299ED12400567700 /* EventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
+		7A43C297299EF2AB00567700 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		7A43C29A299EFB9900567700 /* EventMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMock.swift; sourceTree = "<group>"; };
+		7A43C29C299EFC5C00567700 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		7A43C2A3299FB4B200567700 /* AnyPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyPublisher.swift; sourceTree = "<group>"; };
+		7A43C2A7299FC35B00567700 /* BrawlerStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrawlerStatView.swift; sourceTree = "<group>"; };
+		7A43C2AA299FC51E00567700 /* Brawler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brawler.swift; sourceTree = "<group>"; };
+		7A43C2AC299FC53E00567700 /* BrawlerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrawlerItem.swift; sourceTree = "<group>"; };
+		7A43C2AE299FC5BE00567700 /* BrawlerRarity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrawlerRarity.swift; sourceTree = "<group>"; };
+		7A43C2B0299FC5C700567700 /* BrawlerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrawlerClass.swift; sourceTree = "<group>"; };
+		7A43C2B2299FC68000567700 /* BrawlerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrawlerMock.swift; sourceTree = "<group>"; };
+		7A43C2B4299FC6A900567700 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		7A43C2B8299FC8B200567700 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
+		7A43C2BA299FD16600567700 /* EventRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +126,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A323CD9299BB2EE00E61906 /* Moya in Frameworks */,
-				7A323CD7299BB2EE00E61906 /* AsyncMoya in Frameworks */,
+				7A43C2A0299FB16D00567700 /* CombineMoya in Frameworks */,
+				7A43C278299E8ECB00567700 /* Kingfisher in Frameworks */,
+				7A43C2A2299FB16D00567700 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +182,7 @@
 		7A323CA4299B940100E61906 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				7A43C299299EFB8C00567700 /* Mocks */,
 				7A323CA5299B940100E61906 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -186,6 +211,7 @@
 				7A323C9E299B940000E61906 /* Brawl_Stars_InsiderApp.swift */,
 				7A323CDF299BB5D400E61906 /* Views */,
 				7A323CD2299BAEFD00E61906 /* API */,
+				7A43C279299EB04800567700 /* Repository */,
 				7A323CC9299BA16300E61906 /* Models */,
 				7A323CE2299BB61100E61906 /* Extensions */,
 				7A323CDE299BB5CE00E61906 /* Tools */,
@@ -196,23 +222,7 @@
 		7A323CC9299BA16300E61906 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7A323CCA299BA1C800E61906 /* Event.swift */,
-				7A323CCC299BA21E00E61906 /* EventMode.swift */,
-				7A323CCE299BA26E00E61906 /* Modifier.swift */,
-				7A323CD0299BA31E00E61906 /* ScheduledEvent.swift */,
-				7A323CE9299BBA7900E61906 /* Brawler.swift */,
-				7A323CEB299BD01400E61906 /* Season.swift */,
-				7A323CED299BD19400E61906 /* Item.swift */,
-				7A323CF5299BDEA900E61906 /* RankingItem.swift */,
-				7A323CF7299BDECD00E61906 /* Club.swift */,
-				7A323CF9299BDEDE00E61906 /* Icon.swift */,
-				7A323CFB299BDF4000E61906 /* Battle.swift */,
-				7A323CFD299BDF6400E61906 /* BattleType.swift */,
-				7A323CFF299BDFC000E61906 /* Player.swift */,
-				7A323D01299BE00100E61906 /* PlayerBrawler.swift */,
-				7A323D03299BE04100E61906 /* BattleLog.swift */,
-				7A323D05299BE1ED00E61906 /* BattleResult.swift */,
-				7A323D07299BE29B00E61906 /* Team.swift */,
+				7A43C289299EC88500567700 /* Brawlify */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,9 +230,10 @@
 		7A323CD2299BAEFD00E61906 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				7A43C26F299E78EB00567700 /* Responses */,
 				7A323CDA299BB30800E61906 /* Endpoint.swift */,
-				7A323CDC299BB48B00E61906 /* BrawlStarsEndpoint.swift */,
 				7A323CEF299BD27300E61906 /* ListResponse.swift */,
+				7A43C26D299E701000567700 /* BrawlifyEndpoint.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -231,6 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				7A323CE0299BB5E400E61906 /* Logger.swift */,
+				7A43C27A299EB07300567700 /* AppPath.swift */,
+				7A43C27C299EB0CE00567700 /* Store.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -238,7 +251,7 @@
 		7A323CDF299BB5D400E61906 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7A323CA0299B940000E61906 /* ContentView.swift */,
+				7A43C292299ECC1000567700 /* Events */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,8 +263,94 @@
 				7A323CE5299BB69000E61906 /* MoyaProvider.swift */,
 				7A323CF1299BD55400E61906 /* JSONDecoder.swift */,
 				7A323CF3299BD58400E61906 /* DateFormatter.swift */,
+				7A43C297299EF2AB00567700 /* Color.swift */,
+				7A43C29C299EFC5C00567700 /* String.swift */,
+				7A43C2A3299FB4B200567700 /* AnyPublisher.swift */,
+				7A43C2B4299FC6A900567700 /* Int.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7A43C26F299E78EB00567700 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				7A43C274299E79FF00567700 /* GetIconsResponse.swift */,
+				7A43C280299EC1D800567700 /* GetEventsResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		7A43C279299EB04800567700 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7A43C27E299EB12500567700 /* IconsRepository.swift */,
+				7A43C2B8299FC8B200567700 /* Icons.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		7A43C284299EC7DD00567700 /* Get Events */ = {
+			isa = PBXGroup;
+			children = (
+				7A43C28C299EC8D800567700 /* Map.swift */,
+				7A43C282299EC7C400567700 /* Stat.swift */,
+				7A43C285299EC7F100567700 /* GameMode.swift */,
+				7A43C287299EC84800567700 /* Environment.swift */,
+				7A43C28E299ECB2000567700 /* Event.swift */,
+				7A43C290299ECB2D00567700 /* Slot.swift */,
+			);
+			path = "Get Events";
+			sourceTree = "<group>";
+		};
+		7A43C289299EC88500567700 /* Brawlify */ = {
+			isa = PBXGroup;
+			children = (
+				7A43C2A9299FC51200567700 /* Get Brawlers */,
+				7A43C28B299EC8A200567700 /* Get Icons */,
+				7A43C284299EC7DD00567700 /* Get Events */,
+			);
+			path = Brawlify;
+			sourceTree = "<group>";
+		};
+		7A43C28B299EC8A200567700 /* Get Icons */ = {
+			isa = PBXGroup;
+			children = (
+				7A43C270299E790100567700 /* PlayerIcon.swift */,
+				7A43C272299E790B00567700 /* ClubIcon.swift */,
+			);
+			path = "Get Icons";
+			sourceTree = "<group>";
+		};
+		7A43C292299ECC1000567700 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				7A323CA0299B940000E61906 /* EventsView.swift */,
+				7A43C293299ECC1B00567700 /* EventsViewModel.swift */,
+				7A43C295299ED12400567700 /* EventRow.swift */,
+				7A43C2A7299FC35B00567700 /* BrawlerStatView.swift */,
+				7A43C2BA299FD16600567700 /* EventRowViewModel.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		7A43C299299EFB8C00567700 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				7A43C29A299EFB9900567700 /* EventMock.swift */,
+				7A43C2B2299FC68000567700 /* BrawlerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		7A43C2A9299FC51200567700 /* Get Brawlers */ = {
+			isa = PBXGroup;
+			children = (
+				7A43C2AA299FC51E00567700 /* Brawler.swift */,
+				7A43C2AC299FC53E00567700 /* BrawlerItem.swift */,
+				7A43C2AE299FC5BE00567700 /* BrawlerRarity.swift */,
+				7A43C2B0299FC5C700567700 /* BrawlerClass.swift */,
+			);
+			path = "Get Brawlers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,8 +370,9 @@
 			);
 			name = "Brawl Stars Insider";
 			packageProductDependencies = (
-				7A323CD6299BB2EE00E61906 /* AsyncMoya */,
-				7A323CD8299BB2EE00E61906 /* Moya */,
+				7A43C277299E8ECB00567700 /* Kingfisher */,
+				7A43C29F299FB16D00567700 /* CombineMoya */,
+				7A43C2A1299FB16D00567700 /* Moya */,
 			);
 			productName = "Brawl Stars Insider";
 			productReference = 7A323C9B299B940000E61906 /* Brawl Stars Insider.app */;
@@ -347,7 +447,8 @@
 			);
 			mainGroup = 7A323C92299B940000E61906;
 			packageReferences = (
-				7A323CD5299BB2EE00E61906 /* XCRemoteSwiftPackageReference "Moya" */,
+				7A43C276299E8ECB00567700 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				7A43C29E299FB16D00567700 /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			productRefGroup = 7A323C9C299B940000E61906 /* Products */;
 			projectDirPath = "";
@@ -391,33 +492,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A43C273299E790B00567700 /* ClubIcon.swift in Sources */,
+				7A43C283299EC7C400567700 /* Stat.swift in Sources */,
 				7A323CF4299BD58400E61906 /* DateFormatter.swift in Sources */,
-				7A323CA1299B940000E61906 /* ContentView.swift in Sources */,
-				7A323D02299BE00100E61906 /* PlayerBrawler.swift in Sources */,
+				7A323CA1299B940000E61906 /* EventsView.swift in Sources */,
+				7A43C2A4299FB4B200567700 /* AnyPublisher.swift in Sources */,
 				7A323CF2299BD55400E61906 /* JSONDecoder.swift in Sources */,
+				7A43C28D299EC8D800567700 /* Map.swift in Sources */,
 				7A323CDB299BB30800E61906 /* Endpoint.swift in Sources */,
-				7A323D00299BDFC000E61906 /* Player.swift in Sources */,
-				7A323CCD299BA21E00E61906 /* EventMode.swift in Sources */,
-				7A323CCB299BA1C800E61906 /* Event.swift in Sources */,
-				7A323CFE299BDF6400E61906 /* BattleType.swift in Sources */,
-				7A323CF6299BDEA900E61906 /* RankingItem.swift in Sources */,
-				7A323CF8299BDECD00E61906 /* Club.swift in Sources */,
+				7A43C27D299EB0CE00567700 /* Store.swift in Sources */,
+				7A43C27F299EB12500567700 /* IconsRepository.swift in Sources */,
+				7A43C29D299EFC5C00567700 /* String.swift in Sources */,
+				7A43C288299EC84800567700 /* Environment.swift in Sources */,
 				7A323CE4299BB61D00E61906 /* Data.swift in Sources */,
-				7A323CFA299BDEDE00E61906 /* Icon.swift in Sources */,
-				7A323D06299BE1ED00E61906 /* BattleResult.swift in Sources */,
+				7A43C29B299EFB9900567700 /* EventMock.swift in Sources */,
+				7A43C275299E79FF00567700 /* GetIconsResponse.swift in Sources */,
 				7A323CE1299BB5E400E61906 /* Logger.swift in Sources */,
-				7A323D08299BE29B00E61906 /* Team.swift in Sources */,
-				7A323CDD299BB48B00E61906 /* BrawlStarsEndpoint.swift in Sources */,
+				7A43C2B9299FC8B200567700 /* Icons.swift in Sources */,
+				7A43C291299ECB2D00567700 /* Slot.swift in Sources */,
+				7A43C271299E790100567700 /* PlayerIcon.swift in Sources */,
+				7A43C2BB299FD16600567700 /* EventRowViewModel.swift in Sources */,
+				7A43C2B5299FC6A900567700 /* Int.swift in Sources */,
+				7A43C296299ED12400567700 /* EventRow.swift in Sources */,
+				7A43C2AF299FC5BE00567700 /* BrawlerRarity.swift in Sources */,
 				7A323CF0299BD27300E61906 /* ListResponse.swift in Sources */,
-				7A323CEE299BD19400E61906 /* Item.swift in Sources */,
-				7A323D04299BE04100E61906 /* BattleLog.swift in Sources */,
+				7A43C298299EF2AB00567700 /* Color.swift in Sources */,
+				7A43C28F299ECB2000567700 /* Event.swift in Sources */,
+				7A43C2AB299FC51E00567700 /* Brawler.swift in Sources */,
+				7A43C2B1299FC5C700567700 /* BrawlerClass.swift in Sources */,
+				7A43C27B299EB07300567700 /* AppPath.swift in Sources */,
 				7A323C9F299B940000E61906 /* Brawl_Stars_InsiderApp.swift in Sources */,
-				7A323CD1299BA31E00E61906 /* ScheduledEvent.swift in Sources */,
+				7A43C281299EC1D800567700 /* GetEventsResponse.swift in Sources */,
+				7A43C26E299E701000567700 /* BrawlifyEndpoint.swift in Sources */,
+				7A43C2AD299FC53E00567700 /* BrawlerItem.swift in Sources */,
+				7A43C2A8299FC35B00567700 /* BrawlerStatView.swift in Sources */,
 				7A323CE6299BB69000E61906 /* MoyaProvider.swift in Sources */,
-				7A323CCF299BA26E00E61906 /* Modifier.swift in Sources */,
-				7A323CFC299BDF4000E61906 /* Battle.swift in Sources */,
-				7A323CEC299BD01400E61906 /* Season.swift in Sources */,
-				7A323CEA299BBA7900E61906 /* Brawler.swift in Sources */,
+				7A43C2B3299FC68000567700 /* BrawlerMock.swift in Sources */,
+				7A43C286299EC7F100567700 /* GameMode.swift in Sources */,
+				7A43C294299ECC1B00567700 /* EventsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -744,25 +856,38 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7A323CD5299BB2EE00E61906 /* XCRemoteSwiftPackageReference "Moya" */ = {
+		7A43C276299E8ECB00567700 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		7A43C29E299FB16D00567700 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya";
 			requirement = {
-				branch = development;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		7A323CD6299BB2EE00E61906 /* AsyncMoya */ = {
+		7A43C277299E8ECB00567700 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7A323CD5299BB2EE00E61906 /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = AsyncMoya;
+			package = 7A43C276299E8ECB00567700 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
-		7A323CD8299BB2EE00E61906 /* Moya */ = {
+		7A43C29F299FB16D00567700 /* CombineMoya */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7A323CD5299BB2EE00E61906 /* XCRemoteSwiftPackageReference "Moya" */;
+			package = 7A43C29E299FB16D00567700 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		7A43C2A1299FB16D00567700 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A43C29E299FB16D00567700 /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */

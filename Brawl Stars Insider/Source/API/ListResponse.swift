@@ -7,16 +7,6 @@
 
 import Foundation
 
-struct Paging: Codable {
-    let cursors: Cursors
-}
-
-struct Cursors: Codable {
-    let after: String?
-    let before: String?
-}
-
 struct ListResponse<T: Codable>: Codable {
-    let items: [T]
-    let paging: Paging
+    let list: [T]
 }

@@ -10,22 +10,8 @@ import Foundation
 
 protocol Endpoint: TargetType { }
 
-extension Endpoint {
-    var baseURL: URL {
-        URL(string: "https://api.brawlstars.com/v1")!
-    }
-    
-    var headers: [String : String]? {
-        [
-            "Accept-Language" : Locale.preferredLanguages[0],
-            "Content-type": "application/json",
-            "accept" : "application/json",
-            "Authorization" : bearerToken,
-        ]
-            .compactMapValues { $0 }
-    }
-    
-    var task: HTTPTask {
+extension Endpoint {    
+    var task: Task {
         .requestPlain
     }
     
@@ -33,7 +19,12 @@ extension Endpoint {
         .successCodes
     }
     
-    private var bearerToken: String {
-        ""
+    var headers: [String : String]? {
+        [
+            "Accept-Language" : Locale.preferredLanguages[0],
+            "Content-type": "application/json",
+            "accept" : "application/json",
+        ]
+        .compactMapValues { $0 }
     }
 }
