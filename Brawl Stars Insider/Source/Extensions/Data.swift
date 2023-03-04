@@ -8,11 +8,6 @@
 import Foundation
 
 extension Data {
-    
-    static var empty: Data {
-        Data()
-    }
-    
     var formattedJSONString: String {
         guard
             let json = try? JSONSerialization.jsonObject(with: self, options: .mutableContainers),

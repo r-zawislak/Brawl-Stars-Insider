@@ -10,6 +10,8 @@ import SwiftUI
 struct EventsView: View {
     @StateObject var viewModel = EventsViewModel()
     
+    private let localizations = Localizations.Events.self
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -17,7 +19,7 @@ struct EventsView: View {
                     .ignoresSafeArea()
                 content
             }
-            .navigationTitle("Events")
+            .navigationTitle(localizations.Title.localized)
         }
 
         .task {

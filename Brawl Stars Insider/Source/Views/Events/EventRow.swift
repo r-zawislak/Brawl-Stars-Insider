@@ -16,6 +16,7 @@ struct EventRow: View {
     
     private let cornerRadius: CGFloat = 24
     private let lineWidth: CGFloat = 1
+    private let localizations = Localizations.Events.Row.self
     
     private var mapBackgroundColor: Color { Color(hex: event.map.gameMode.bgColor)
     }
@@ -75,7 +76,7 @@ struct EventRow: View {
             
     private var recommendedBrawlers: some View {
         VStack(alignment: .leading) {
-            Text("Recommended")
+            Text(localizations.Recommended.localized)
                 .bold()
             HStack(spacing: 16) {
                 ForEach(viewModel.recommended, id: \.brawler) {

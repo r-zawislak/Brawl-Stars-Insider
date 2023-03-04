@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import Moya
 
 enum IconsRepositoryError: Error {
     case noPlayerIcon
@@ -15,7 +14,7 @@ enum IconsRepositoryError: Error {
 
 final class IconsRepository {
     private let store = Store<Icons>(jsonPath: .iconsJSON, defaultValue: Icons())
-    private let provider = MoyaProvider<BrawlifyEndpoint>()
+    private let provider = Provider<BrawlifyEndpoint>()
     
     init() { }
     
@@ -45,9 +44,7 @@ final class IconsRepository {
         if let brawler = store.item.brawlerForId[id] {
             return brawler
         } else {
-            let response = try await provider.requestPublisher(.getBrawlers)
-                .map(ListResponse<Brawler>.self, using: .brawlifyDecoder)
-                .async()
+            let response = try await provider.request(.getBrawlers, responseType: ListResponse<Brawler>.self)
             
             store.item.brawlerForId = response.list.reduce(into: [Int : Brawler]()) { dict, element in
                 dict[element.id] = element
@@ -58,9 +55,7 @@ final class IconsRepository {
     }
 
     private func updateClubPlayerIcons() async throws {
-        let response = try await provider.requestPublisher(.getIcons)
-            .map(GetIconsResponse.self, using: .brawlifyDecoder)
-            .async()
+        let response = try await provider.request(.getIcons, responseType: GetIconsResponse.self)
         
         store.item.clubIconForId = response.club
         store.item.playerIconForId = response.player

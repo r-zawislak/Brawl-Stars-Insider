@@ -1,0 +1,179 @@
+// swiftlint:disable all
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
+
+import Foundation
+import SwiftUI
+{% if files %}
+{% set accessModifier %}{% if param.publicAccess %}public{% else %}internal{% endif %}{% endset %}
+{% set documentPrefix %}{{param.documentName|default:"Document"}}{% endset %}
+
+// MARK: - Plist Files
+{% macro fileBlock file %}
+  {% if file.documents.count > 1 %}
+  {% for document in file.documents %}
+  {% set documentName %}{{documentPrefix}}{{forloop.counter}}{% endset %}
+  {{accessModifier}} enum {{documentName|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
+    {% filter indent:2 %}{% call documentBlock file document %}{% endfilter %}
+  }
+  {% endfor %}
+  {% else %}
+  {% call documentBlock file file.documents.first %}
+  {% endif %}
+{% endmacro %}
+{% macro documentBlock file document %}
+  {% set rootType %}{% call typeBlock document.metadata %}{% endset %}
+  {% if document.metadata.type == "Array" %}
+  {{accessModifier}} static let items: {{rootType}} = {{ document.data }}
+  {% elif document.metadata.type == "Dictionary" %}
+  {% for key,value in document.metadata.properties %}
+    {% call propertyBlock key value document.data key %}
+  {% endfor %}
+  {% else %}
+  {{accessModifier}} static let value: {{rootType}} = {% call valueBlock document.data document.metadata %}
+  {% endif %}
+{% endmacro %}
+{% macro typeBlock metadata %}{% filter removeNewlines:"leading" %}
+  {% if metadata.type == "Array" %}
+    [{% call typeBlock metadata.element %}]
+  {% elif metadata.type == "Dictionary" %}
+    [String: String]
+  {% else %}
+    {{metadata.type}}
+  {% endif %}
+{% endfilter %}{% endmacro %}
+{% macro propertyBlock key metadata data finalKeyPath %}
+    {% set enumName %}{{key|swiftIdentifier:"pretty"|escapeReservedKeywords}}{% endset %}
+    {% if metadata.type == "Dictionary" %}
+        {{accessModifier}} enum {{enumName}} {
+          {% filter indent:2 %}static var key: String { return "{{finalKeyPath}}" }{% endfilter %}
+            {% for subKey, value in metadata.properties %}
+            {% set newFinalKeyPath %}{{finalKeyPath}}.{{subKey}}{% endset %}
+                {% filter indent:2 %}{% call propertyBlock subKey value data[key] newFinalKeyPath %}{% endfilter %}
+            {% endfor %}
+        }
+    {% else %}
+        {% set propertyName %}{{key|swiftIdentifier:"pretty"|escapeReservedKeywords}}{% endset %}
+        {% set translation %}{{data[key]}}{% endset %}
+        /*
+        {% filter removeNewlines:"leading" %}{{translation}}{% endfilter %}
+        */
+        {{accessModifier}} enum {{propertyName}} {
+            static var key: String { return "{{finalKeyPath}}" }
+            {% if translation|contains:"{9}" %}
+            {% filter removeNewlines:"leading" %}{% call localizedFunction finalKeyPath 10 %}{% endfilter %}
+            {% elif translation|contains:"{8}" %}
+            {% filter removeNewlines:"leading" %}{% call localizedFunction finalKeyPath 9 %}{% endfilter %}
+            {% elif translation|contains:"{7}" %}
+            {% filter removeNewlines:"leading" %}{% call localizedFunction finalKeyPath 8 %}{% endfilter %}
+            {% elif translation|contains:"{6}" %}
+            {% filter removeNewlines:"leading" %}{% call localizedFunction finalKeyPath 7 %}{% endfilter %}
+            {% elif translation|contains:"{5}" %}
+            {% filter removeNewlines:"leading" %}{% call localizedFunction finalKeyPath 6 %}{% endfilter %}
+            {% elif translation|contains:"{4}" %}
+            {% filter removeNewlines:"leading" %}{% call localizedFunction finalKeyPath 5 %}{% endfilter %}
+            {% elif translation|contains:"{3}" %}
+            {% filter removeNewlines:"leading" %}{% call localizedFunction finalKeyPath 4 %}{% endfilter %}
+            {% elif translation|contains:"{2}" %}
+            {% filter removeNewlines:"leading" %}{% call localizedFunction finalKeyPath 3 %}{% endfilter %}
+            {% elif translation|contains:"{1}" %}
+            {% filter removeNewlines:"leading" %}{% call localizedFunction finalKeyPath 2 %}{% endfilter %}
+            {% elif translation|contains:"{0}" %}
+            {% filter removeNewlines:"leading" %}{% call localizedFunction finalKeyPath 1 %}{% endfilter %}
+            {% else %}
+            static var localized: String { "{{finalKeyPath}}".localized() }
+            {% endif %}
+        }
+    {% endif %}
+{% endmacro %}
+{% macro localizedFunction keyPath count %}
+    static func localized({% call argumentNames count %}) -> String { return "{{keyPath}}".localized(parameters: [{% call parameterNames count %}]) }
+{% endmacro %}
+{% macro argumentNames count %}
+    {% for i in 1...count %}
+    p{{forloop.counter0}}: String{{ ", " if not forloop.last }}
+    {% endfor %}
+{% endmacro %}
+{% macro parameterNames count %}
+    {% for i in 1...count %}
+    p{{forloop.counter0}}{{ ", " if not forloop.last }}
+    {% endfor %}
+{% endmacro %}
+{% macro valueBlock value metadata %}{% filter removeNewlines:"leading" %}
+  {% if metadata.type == "String" %}
+    "{{ value }}"
+  {% elif metadata.type == "Date" %}
+    Date(timeIntervalSinceReferenceDate: {{ value.timeIntervalSinceReferenceDate }})
+  {% elif metadata.type == "Optional" %}
+    nil
+  {% elif metadata.type == "Array" and metadata.element.items %}
+    [{% for itemMetadata in metadata.element.items %}
+      {% call valueBlock value[forloop.counter0] itemMetadata %}
+      {% if not forloop.last %}, {% endif %}
+    {% endfor %}]
+  {% elif metadata.type == "Dictionary" %}
+    [{% for key,value in value %}
+      "{{key}}": {% call valueBlock value metadata.properties[key] %}
+      {% if not forloop.last %}, {% endif %}
+    {% empty %}
+      :
+    {% endfor %}]
+  {% else %}
+    {{ value }}
+  {% endif %}
+{% endfilter %}{% endmacro %}
+{{accessModifier}} enum {{param.enumName|default:"Localizations"}} {
+  {% if files.count > 1 %}
+  {% for file in files %}
+  {{accessModifier}} enum {{file.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
+    {% filter indent:2 %}{% call fileBlock file %}{% endfilter %}
+  }
+  {% endfor %}
+  {% else %}
+  {% call fileBlock files.first %}
+  {% endif %}
+}
+{% else %}
+// No files found
+{% endif %}
+// swiftlint:enable all
+
+extension String {
+    
+    // MARK: - Localization
+    
+    func localized(parameters: [String] = [], prefix: String = "") -> String {
+        let logMessage = "Missing localization key: \(self)"
+        var keys = components(separatedBy: ".")
+        
+        guard
+            let path = Bundle.main.path(forResource: "\(prefix)Localizations", ofType: "plist"),
+            let dictionary = NSDictionary(contentsOfFile: path),
+            let valueKey = keys.popLast()
+        else {
+            print(logMessage)
+            return ""
+        }
+        
+        var searchDictionary: NSDictionary? = dictionary
+        
+        for key in keys {
+            searchDictionary = searchDictionary?[key] as? NSDictionary
+        }
+        
+        guard var string = searchDictionary?[valueKey] as? String else {
+            print(logMessage)
+            return ""
+        }
+        
+        if !parameters.isEmpty {
+            for (index, parameterString) in parameters.enumerated() {
+                string = string.replacingOccurrences(of: "{\(index)}", with: parameterString)
+            }
+        }
+        return string.replacingOccurrences(of: "\\n", with: "\n")
+    }
+    
+    var markdowned: LocalizedStringKey {
+        LocalizedStringKey(self)
+    }
+}

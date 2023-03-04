@@ -5,8 +5,8 @@
 //  Created by Rajmund Zawiślak on 14/02/2023.
 //
 
-import Moya
 import Foundation
+import Alamofire
 
 enum LogType {
     case request
@@ -44,34 +44,34 @@ final class Logger {
     }
 }
 
-// MARK: - Moya.PluginType
+// MARK: - EventMonitor
 
-extension Logger: PluginType {
-    func willSend(_ request: RequestType, target: TargetType) {
-        requestItems(requestType: request, target: target).forEach {
+extension Logger: EventMonitor {
+    
+    func requestDidResume(_ request: Request) {
+        requestItems(request: request).forEach {
             log($0, logType: .request)
         }
     }
     
-    func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
-        responseItems(result: result, target: target).forEach {
+    func request<Value>(_ request: DataRequest, didParseResponse response: DataResponse<Value, AFError>) {
+        successResponseItems(response: response).forEach {
             log($0, logType: .response)
         }
     }
-    
-    private func requestItems(requestType: RequestType, target: TargetType) -> [String] {
-        guard let request = requestType.request else {
-            return ["Invalid request for \(target.baseURL.path)\(target.path)"]
+
+    private func requestItems(request: Request?) -> [String] {
+        guard let request = request?.request else {
+            return ["Invalid request"]
         }
-        
-        var allHeaders = requestType.sessionHeaders
-        allHeaders.merge(request.allHTTPHeaderFields ?? [:]) { $1 }
-        
+
+        let allHeaders = request.allHTTPHeaderFields ?? [:]
+
         let formattedHeaders = allHeaders.map {
             "\t\($0.key): \($0.value)"
         }
             .joined(separator: "\n")
-        
+
         return [
             "Method: \(request.httpMethod ?? "No method")",
             "URL: \(request.description)",
@@ -79,28 +79,15 @@ extension Logger: PluginType {
             "Body:\n\(request.httpBody?.formattedJSONString ?? "\tEmpty")",
         ]
     }
-    
-    private func responseItems(result: Result<Response, MoyaError>, target: TargetType) -> [String] {
-        switch result {
-        case .success(let response):
-            return successResponseItems(response: response, target: target)
-        case .failure(let error):
-            return errorResponseItems(error: error, target: target)
-        }
-    }
-    
-    private func successResponseItems(response: Response, target: TargetType) -> [String] {
+
+    private func successResponseItems<Value>(response: DataResponse<Value, AFError>) -> [String] {
         return [
-            "URL: \(response.response?.url?.absoluteString ?? (target.baseURL.path + target.path))",
-            "Body:\n\(response.data.formattedJSONString)",
+            "URL: \(response.response?.url?.absoluteString ?? "No URL")",
+            "Body:\n\(response.data?.formattedJSONString ?? "No body")",
         ]
     }
-    
-    private func errorResponseItems(error: MoyaError, target: TargetType) -> [String] {
-        if let response = error.response {
-            return successResponseItems(response: response, target: target)
-        } else {
-            return ["Error while calling \(target.baseURL.path)\(target.path)"]
-        }
+
+    private func errorResponseItems(error: AFError) -> [String] {
+        return ["Response Error \(String(describing: error.errorDescription))"]
     }
 }

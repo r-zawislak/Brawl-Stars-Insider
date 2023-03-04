@@ -5,17 +5,13 @@
 //  Created by Rajmund Zawiślak on 16/02/2023.
 //
 
-import Moya
 import Foundation
+import Alamofire
 
 enum BrawlifyEndpoint: Endpoint {
     case getIcons
     case getEvents
     case getBrawlers
-    
-    var baseURL: URL {
-        URL(string: "https://api.brawlapi.com/v1")!
-    }
     
     var path: String {
         switch self {
@@ -28,7 +24,8 @@ enum BrawlifyEndpoint: Endpoint {
         }
     }
     
-    var method: Moya.Method {
-        .get
+    // TODO: Sourcery would be nice for mocks
+    var mockData: Data? {
+        nil
     }
 }

@@ -1,0 +1,20 @@
+xcassets:
+   - inputs:
+       - ${PROJECT_DIR}/${TARGET_NAME}/Resources/Images.xcassets
+       - ${PROJECT_DIR}/${TARGET_NAME}/Resources/Colors.xcassets
+     outputs:
+       - templateName: swift5
+         output: ${PROJECT_DIR}/${TARGET_NAME}/BuildTools/SwiftGen/Generated/Assets+Generated.swift
+   - inputs: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Images.xcassets
+     outputs:
+       - templatePath: ${PROJECT_DIR}/${TARGET_NAME}/BuildTools/SwiftGen/Stencils/Image.stencil
+         output: ${PROJECT_DIR}/${TARGET_NAME}/BuildTools/SwiftGen/Generated/Image+Generated.swift
+   - inputs: ${PROJECT_DIR}/${TARGET_NAME}/Resources/Colors.xcassets
+     outputs:
+       - templatePath: ${PROJECT_DIR}/${TARGET_NAME}/BuildTools/SwiftGen/Stencils/Color.stencil
+         output: ${PROJECT_DIR}/${TARGET_NAME}/BuildTools/SwiftGen/Generated/Color+Generated.swift
+plist:
+   inputs: ${PROJECT_DIR}/${TARGET_NAME}/Resources/en.lproj/Localizations.plist
+   outputs:
+     - templatePath: ${PROJECT_DIR}/${TARGET_NAME}/BuildTools/SwiftGen/Stencils/Localizations.stencil
+       output: ${PROJECT_DIR}/${TARGET_NAME}/BuildTools/SwiftGen/Generated/Localizations+Generated.swift

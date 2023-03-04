@@ -1,0 +1,53 @@
+// swiftlint:disable all
+// Generated using SwiftGen — https://github.com/SwiftGen/SwiftGen
+{% if catalogs %}
+{% set enumName %}{{param.enumName|default:"Asset"}}{% endset %}
+{% set colorType %}{{param.colorTypeName|default:"ColorAsset"}}{% endset %}
+{% set dataType %}{{param.dataTypeName|default:"DataAsset"}}{% endset %}
+{% set imageType %}{{param.imageTypeName|default:"ImageAsset"}}{% endset %}
+{% set colorAlias %}{{param.colorAliasName|default:"AssetColorTypeAlias"}}{% endset %}
+{% set imageAlias %}{{param.imageAliasName|default:"AssetImageTypeAlias"}}{% endset %}
+{% set forceNamespaces %}{{param.forceProvidesNamespaces|default:"false"}}{% endset %}
+import SwiftUI
+{% macro extensionBlock assets sp %}
+  {% call extensionPropertiesBlock assets sp %}
+{% endmacro %}
+{% macro extensionPropertiesBlock assets sp %}
+{{sp}}  {% for asset in assets %}
+{{sp}}  {% if asset.type == "color" %}
+{{sp}}  static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{enumName}}.Colors.{{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}}.color
+{{sp}}  {% elif asset.items and ( forceNamespaces == "true" or asset.isNamespaced == "true" ) %}
+{{sp}}  {% elif asset.items %}
+{{sp}}  {% call extensionBlock asset.items sp %}
+{{sp}}  {% endif %}
+{{sp}}  {% endfor %}
+{% endmacro %}
+{% macro uiExtensionBlock assets sp %}
+  {% call uiExtensionPropertiesBlock assets sp %}
+{% endmacro %}
+{% macro uiExtensionPropertiesBlock assets sp %}
+{{sp}}  {% for asset in assets %}
+{{sp}}  {% if asset.type == "color" %}
+{{sp}}  static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{enumName}}.Colors.{{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}}.uiColor
+{{sp}}  {% elif asset.items and ( forceNamespaces == "true" or asset.isNamespaced == "true" ) %}
+{{sp}}  {% elif asset.items %}
+{{sp}}  {% call uiExtensionBlock asset.items sp %}
+{{sp}}  {% endif %}
+{{sp}}  {% endfor %}
+{% endmacro %}
+
+extension Color {
+  {% if catalogs.count > 1 %}
+  {% for catalog in catalogs %}
+  {{accessModifier}} enum {{catalog.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
+      {% filter indent:2 %}{% call extensionBlock catalog.assets "  " %}{% endfilter %}
+  }
+  {% endfor %}
+  {% else %}
+  {% call extensionBlock catalogs.first.assets "  " %}
+  {% endif %}
+}
+{% else %}
+// No assets found
+{% endif %}
+// swiftlint:enable all

@@ -12,6 +12,8 @@ final class EventRowViewModel: ObservableObject {
     @Published var recommended: [Event.Map.Stat] = []
     @Published var eventEndsInString = ""
     
+    private let filteredWinRates = 50.0
+    private let filteredUseRates = 2.0
     private let winRateWeight = 0.1
     private let useRateWeight = 0.9
     private let recommendedStatsCount = 5
@@ -34,14 +36,14 @@ final class EventRowViewModel: ObservableObject {
     }
     
     private func updateEventEndsInString() {
-        eventEndsInString = "Ends in \(dateComponentsFormatter.string(from: timeToEndEvent) ?? "")"
+        let dateString = dateComponentsFormatter.string(from: timeToEndEvent) ?? ""
+        eventEndsInString = Localizations.Events.Row.EndsIn.localized(p0: dateString)
     }
     
     private func updateRecommendedBrawlers() {
-        let filteredStats = event.map.stats
-            .filter { stat in
-                stat.winRate > 50 && stat.useRate > 2
-            }
+        let filteredStats = event.map.stats.filter { stat in
+            stat.winRate > filteredWinRates && stat.useRate > filteredUseRates
+        }
         
         let weightSum = useRateWeight + winRateWeight
   
@@ -52,15 +54,8 @@ final class EventRowViewModel: ObservableObject {
             return lhsWeight > rhsWeight
         }
         
-        let recommendedStatsCount = sortedStats.count > 4 ? recommendedStatsCount : sortedStats.count
+        let recommendedStatsCount = min(sortedStats.count, recommendedStatsCount)
         
-//        print("\nMap: \(event.map.name)\n")
-//        
-//        sortedStats.forEach {
-//            print("ID: \($0.brawler)")
-//            print("Win: \($0.winRate)")
-//            print("Use: \($0.useRate)")
-//        }
-        recommended = Array(sortedStats.prefix(upTo: recommendedStatsCount))
+        recommended = Array(sortedStats.prefix(recommendedStatsCount))
     }
 }

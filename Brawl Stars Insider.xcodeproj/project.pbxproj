@@ -7,9 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A0C223529B28A4C001C9A19 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C223429B28A4C001C9A19 /* View.swift */; };
+		7A0C223829B29188001C9A19 /* PlaystationTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C223729B29188001C9A19 /* PlaystationTabBar.swift */; };
+		7A0C223B29B29204001C9A19 /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C223A29B29204001C9A19 /* TabItem.swift */; };
+		7A0C223D29B3F607001C9A19 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C223C29B3F607001C9A19 /* Provider.swift */; };
+		7A0C224029B3F632001C9A19 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7A0C223F29B3F632001C9A19 /* Alamofire */; };
+		7A2F9C6329BDE9C900F1F7D7 /* Localizations+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2F9C6229BDE9C900F1F7D7 /* Localizations+Generated.swift */; };
+		7A2F9C6529BDE9D500F1F7D7 /* Image+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2F9C6429BDE9D500F1F7D7 /* Image+Generated.swift */; };
+		7A2F9C6729BDE9E500F1F7D7 /* Color+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2F9C6629BDE9E500F1F7D7 /* Color+Generated.swift */; };
+		7A2FC34B29BAAB3F00FB920D /* Image.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 7A2FC34529BAAB3F00FB920D /* Image.stencil */; };
+		7A2FC34D29BAAB3F00FB920D /* Color.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 7A2FC34729BAAB3F00FB920D /* Color.stencil */; };
+		7A2FC34F29BAAB3F00FB920D /* Localizations.stencil in Resources */ = {isa = PBXBuildFile; fileRef = 7A2FC34929BAAB3F00FB920D /* Localizations.stencil */; };
+		7A2FC35029BAAB3F00FB920D /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7A2FC34A29BAAB3F00FB920D /* swiftgen.yml */; };
+		7A2FC35629BAABFA00FB920D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A2FC35529BAABFA00FB920D /* Colors.xcassets */; };
+		7A2FC35829BAB76700FB920D /* Localizations.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A2FC35A29BAB76700FB920D /* Localizations.plist */; };
+		7A2FC35D29BAB97A00FB920D /* Assets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2FC35C29BAB97A00FB920D /* Assets+Generated.swift */; };
 		7A323C9F299B940000E61906 /* Brawl_Stars_InsiderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323C9E299B940000E61906 /* Brawl_Stars_InsiderApp.swift */; };
 		7A323CA1299B940000E61906 /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CA0299B940000E61906 /* EventsView.swift */; };
-		7A323CA3299B940100E61906 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A323CA2299B940100E61906 /* Assets.xcassets */; };
+		7A323CA3299B940100E61906 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A323CA2299B940100E61906 /* Images.xcassets */; };
 		7A323CA6299B940100E61906 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A323CA5299B940100E61906 /* Preview Assets.xcassets */; };
 		7A323CB0299B940100E61906 /* Brawl_Stars_InsiderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CAF299B940100E61906 /* Brawl_Stars_InsiderTests.swift */; };
 		7A323CBA299B940100E61906 /* Brawl_Stars_InsiderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CB9299B940100E61906 /* Brawl_Stars_InsiderUITests.swift */; };
@@ -17,7 +32,6 @@
 		7A323CDB299BB30800E61906 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CDA299BB30800E61906 /* Endpoint.swift */; };
 		7A323CE1299BB5E400E61906 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CE0299BB5E400E61906 /* Logger.swift */; };
 		7A323CE4299BB61D00E61906 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CE3299BB61D00E61906 /* Data.swift */; };
-		7A323CE6299BB69000E61906 /* MoyaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CE5299BB69000E61906 /* MoyaProvider.swift */; };
 		7A323CF0299BD27300E61906 /* ListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CEF299BD27300E61906 /* ListResponse.swift */; };
 		7A323CF2299BD55400E61906 /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CF1299BD55400E61906 /* JSONDecoder.swift */; };
 		7A323CF4299BD58400E61906 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A323CF3299BD58400E61906 /* DateFormatter.swift */; };
@@ -41,8 +55,6 @@
 		7A43C298299EF2AB00567700 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C297299EF2AB00567700 /* Color.swift */; };
 		7A43C29B299EFB9900567700 /* EventMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C29A299EFB9900567700 /* EventMock.swift */; };
 		7A43C29D299EFC5C00567700 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C29C299EFC5C00567700 /* String.swift */; };
-		7A43C2A0299FB16D00567700 /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 7A43C29F299FB16D00567700 /* CombineMoya */; };
-		7A43C2A2299FB16D00567700 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7A43C2A1299FB16D00567700 /* Moya */; };
 		7A43C2A4299FB4B200567700 /* AnyPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2A3299FB4B200567700 /* AnyPublisher.swift */; };
 		7A43C2A8299FC35B00567700 /* BrawlerStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2A7299FC35B00567700 /* BrawlerStatView.swift */; };
 		7A43C2AB299FC51E00567700 /* Brawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2AA299FC51E00567700 /* Brawler.swift */; };
@@ -53,6 +65,7 @@
 		7A43C2B5299FC6A900567700 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2B4299FC6A900567700 /* Int.swift */; };
 		7A43C2B9299FC8B200567700 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2B8299FC8B200567700 /* Icons.swift */; };
 		7A43C2BB299FD16600567700 /* EventRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2BA299FD16600567700 /* EventRowViewModel.swift */; };
+		7A82514929B27EAF00A792C9 /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82514829B27EAF00A792C9 /* MapsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,10 +86,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7A0C223429B28A4C001C9A19 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		7A0C223729B29188001C9A19 /* PlaystationTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaystationTabBar.swift; sourceTree = "<group>"; };
+		7A0C223A29B29204001C9A19 /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		7A0C223C29B3F607001C9A19 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		7A2F9C6229BDE9C900F1F7D7 /* Localizations+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localizations+Generated.swift"; sourceTree = "<group>"; };
+		7A2F9C6429BDE9D500F1F7D7 /* Image+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Generated.swift"; sourceTree = "<group>"; };
+		7A2F9C6629BDE9E500F1F7D7 /* Color+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Generated.swift"; sourceTree = "<group>"; };
+		7A2FC34529BAAB3F00FB920D /* Image.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Image.stencil; sourceTree = "<group>"; };
+		7A2FC34729BAAB3F00FB920D /* Color.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Color.stencil; sourceTree = "<group>"; };
+		7A2FC34929BAAB3F00FB920D /* Localizations.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Localizations.stencil; sourceTree = "<group>"; };
+		7A2FC34A29BAAB3F00FB920D /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		7A2FC35529BAABFA00FB920D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		7A2FC35929BAB76700FB920D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Localizations.plist; sourceTree = "<group>"; };
+		7A2FC35B29BAB76A00FB920D /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = pl; path = pl.lproj/Localizations.plist; sourceTree = "<group>"; };
+		7A2FC35C29BAB97A00FB920D /* Assets+Generated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assets+Generated.swift"; sourceTree = "<group>"; };
 		7A323C9B299B940000E61906 /* Brawl Stars Insider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brawl Stars Insider.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A323C9E299B940000E61906 /* Brawl_Stars_InsiderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brawl_Stars_InsiderApp.swift; sourceTree = "<group>"; };
 		7A323CA0299B940000E61906 /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
-		7A323CA2299B940100E61906 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A323CA2299B940100E61906 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7A323CA5299B940100E61906 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A323CAB299B940100E61906 /* Brawl Stars InsiderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Brawl Stars InsiderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A323CAF299B940100E61906 /* Brawl_Stars_InsiderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brawl_Stars_InsiderTests.swift; sourceTree = "<group>"; };
@@ -86,7 +114,6 @@
 		7A323CDA299BB30800E61906 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		7A323CE0299BB5E400E61906 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		7A323CE3299BB61D00E61906 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		7A323CE5299BB69000E61906 /* MoyaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaProvider.swift; sourceTree = "<group>"; };
 		7A323CEF299BD27300E61906 /* ListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResponse.swift; sourceTree = "<group>"; };
 		7A323CF1299BD55400E61906 /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
 		7A323CF3299BD58400E61906 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
@@ -119,6 +146,7 @@
 		7A43C2B4299FC6A900567700 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		7A43C2B8299FC8B200567700 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		7A43C2BA299FD16600567700 /* EventRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowViewModel.swift; sourceTree = "<group>"; };
+		7A82514829B27EAF00A792C9 /* MapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,9 +154,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A43C2A0299FB16D00567700 /* CombineMoya in Frameworks */,
 				7A43C278299E8ECB00567700 /* Kingfisher in Frameworks */,
-				7A43C2A2299FB16D00567700 /* Moya in Frameworks */,
+				7A0C224029B3F632001C9A19 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +176,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A0C223629B2914F001C9A19 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				7A0C223929B291F8001C9A19 /* Playstation Tab Bar */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		7A0C223929B291F8001C9A19 /* Playstation Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				7A0C223729B29188001C9A19 /* PlaystationTabBar.swift */,
+				7A0C223A29B29204001C9A19 /* TabItem.swift */,
+			);
+			path = "Playstation Tab Bar";
+			sourceTree = "<group>";
+		};
+		7A2FC34129BAAB3F00FB920D /* BuildTools */ = {
+			isa = PBXGroup;
+			children = (
+				7A2FC34229BAAB3F00FB920D /* SwiftGen */,
+			);
+			path = BuildTools;
+			sourceTree = "<group>";
+		};
+		7A2FC34229BAAB3F00FB920D /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				7A2FC34329BAAB3F00FB920D /* Generated */,
+				7A2FC34429BAAB3F00FB920D /* Stencils */,
+				7A2FC34A29BAAB3F00FB920D /* swiftgen.yml */,
+			);
+			path = SwiftGen;
+			sourceTree = "<group>";
+		};
+		7A2FC34329BAAB3F00FB920D /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				7A2FC35C29BAB97A00FB920D /* Assets+Generated.swift */,
+				7A2F9C6229BDE9C900F1F7D7 /* Localizations+Generated.swift */,
+				7A2F9C6429BDE9D500F1F7D7 /* Image+Generated.swift */,
+				7A2F9C6629BDE9E500F1F7D7 /* Color+Generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		7A2FC34429BAAB3F00FB920D /* Stencils */ = {
+			isa = PBXGroup;
+			children = (
+				7A2FC34529BAAB3F00FB920D /* Image.stencil */,
+				7A2FC34729BAAB3F00FB920D /* Color.stencil */,
+				7A2FC34929BAAB3F00FB920D /* Localizations.stencil */,
+			);
+			path = Stencils;
+			sourceTree = "<group>";
+		};
+		7A2FC35129BAABDB00FB920D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7A323CA2299B940100E61906 /* Images.xcassets */,
+				7A2FC35A29BAB76700FB920D /* Localizations.plist */,
+				7A2FC35529BAABFA00FB920D /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		7A323C92299B940000E61906 = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				7A323CC8299BA15600E61906 /* Source */,
-				7A323CA2299B940100E61906 /* Assets.xcassets */,
+				7A2FC34129BAAB3F00FB920D /* BuildTools */,
+				7A2FC35129BAABDB00FB920D /* Resources */,
 				7A323CA4299B940100E61906 /* Preview Content */,
 			);
 			path = "Brawl Stars Insider";
@@ -211,6 +305,7 @@
 				7A323C9E299B940000E61906 /* Brawl_Stars_InsiderApp.swift */,
 				7A323CDF299BB5D400E61906 /* Views */,
 				7A323CD2299BAEFD00E61906 /* API */,
+				7A0C223629B2914F001C9A19 /* Custom Views */,
 				7A43C279299EB04800567700 /* Repository */,
 				7A323CC9299BA16300E61906 /* Models */,
 				7A323CE2299BB61100E61906 /* Extensions */,
@@ -234,6 +329,7 @@
 				7A323CDA299BB30800E61906 /* Endpoint.swift */,
 				7A323CEF299BD27300E61906 /* ListResponse.swift */,
 				7A43C26D299E701000567700 /* BrawlifyEndpoint.swift */,
+				7A0C223C29B3F607001C9A19 /* Provider.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -251,6 +347,7 @@
 		7A323CDF299BB5D400E61906 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7A82514729B27EA700A792C9 /* Maps */,
 				7A43C292299ECC1000567700 /* Events */,
 			);
 			path = Views;
@@ -260,7 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				7A323CE3299BB61D00E61906 /* Data.swift */,
-				7A323CE5299BB69000E61906 /* MoyaProvider.swift */,
+				7A0C223429B28A4C001C9A19 /* View.swift */,
 				7A323CF1299BD55400E61906 /* JSONDecoder.swift */,
 				7A323CF3299BD58400E61906 /* DateFormatter.swift */,
 				7A43C297299EF2AB00567700 /* Color.swift */,
@@ -353,6 +450,14 @@
 			path = "Get Brawlers";
 			sourceTree = "<group>";
 		};
+		7A82514729B27EA700A792C9 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				7A82514829B27EAF00A792C9 /* MapsView.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -360,6 +465,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7A323CBF299B940100E61906 /* Build configuration list for PBXNativeTarget "Brawl Stars Insider" */;
 			buildPhases = (
+				7A2FC35729BAAC4300FB920D /* Run SwiftGen */,
 				7A323C97299B940000E61906 /* Sources */,
 				7A323C98299B940000E61906 /* Frameworks */,
 				7A323C99299B940000E61906 /* Resources */,
@@ -371,8 +477,7 @@
 			name = "Brawl Stars Insider";
 			packageProductDependencies = (
 				7A43C277299E8ECB00567700 /* Kingfisher */,
-				7A43C29F299FB16D00567700 /* CombineMoya */,
-				7A43C2A1299FB16D00567700 /* Moya */,
+				7A0C223F29B3F632001C9A19 /* Alamofire */,
 			);
 			productName = "Brawl Stars Insider";
 			productReference = 7A323C9B299B940000E61906 /* Brawl Stars Insider.app */;
@@ -444,11 +549,12 @@
 			knownRegions = (
 				en,
 				Base,
+				pl,
 			);
 			mainGroup = 7A323C92299B940000E61906;
 			packageReferences = (
 				7A43C276299E8ECB00567700 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				7A43C29E299FB16D00567700 /* XCRemoteSwiftPackageReference "Moya" */,
+				7A0C223E29B3F632001C9A19 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 7A323C9C299B940000E61906 /* Products */;
 			projectDirPath = "";
@@ -467,7 +573,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A323CA6299B940100E61906 /* Preview Assets.xcassets in Resources */,
-				7A323CA3299B940100E61906 /* Assets.xcassets in Resources */,
+				7A2FC35829BAB76700FB920D /* Localizations.plist in Resources */,
+				7A2FC35029BAAB3F00FB920D /* swiftgen.yml in Resources */,
+				7A2FC35629BAABFA00FB920D /* Colors.xcassets in Resources */,
+				7A2FC34F29BAAB3F00FB920D /* Localizations.stencil in Resources */,
+				7A2FC34D29BAAB3F00FB920D /* Color.stencil in Resources */,
+				7A2FC34B29BAAB3F00FB920D /* Image.stencil in Resources */,
+				7A323CA3299B940100E61906 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +599,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7A2FC35729BAAC4300FB920D /* Run SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PROJECT_DIR}/${TARGET_NAME}/Resources/Assets.xcassets",
+				"${PROJECT_DIR}/${TARGET_NAME}/Resources/Colors.xcassets",
+				"${PROJECT_DIR}/${TARGET_NAME}/Resources/en.lproj/Localizations.plist",
+			);
+			name = "Run SwiftGen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${PROJECT_DIR}/${TARGET_NAME}/BuildTools/SwiftGen/Generated/Assets+Generated.swift",
+				"${PROJECT_DIR}/${TARGET_NAME}/BuildTools/SwiftGen/Generated/Localizations+Generated.swift",
+				"${PROJECT_DIR}/${TARGET_NAME}/BuildTools/SwiftGen/Generated/Image+Generated.swift",
+				"${PROJECT_DIR}/${TARGET_NAME}/BuildTools/SwiftGen/Generated/Colors+Generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\n export PATH\n\nif which swiftgen >/dev/null; then\n    swiftgen config run --config \"${PROJECT_DIR}/${TARGET_NAME}/BuildTools/SwiftGen/swiftgen.yml\"\nelse\n  echo \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7A323C97299B940000E61906 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -495,12 +635,14 @@
 				7A43C273299E790B00567700 /* ClubIcon.swift in Sources */,
 				7A43C283299EC7C400567700 /* Stat.swift in Sources */,
 				7A323CF4299BD58400E61906 /* DateFormatter.swift in Sources */,
+				7A82514929B27EAF00A792C9 /* MapsView.swift in Sources */,
 				7A323CA1299B940000E61906 /* EventsView.swift in Sources */,
 				7A43C2A4299FB4B200567700 /* AnyPublisher.swift in Sources */,
 				7A323CF2299BD55400E61906 /* JSONDecoder.swift in Sources */,
 				7A43C28D299EC8D800567700 /* Map.swift in Sources */,
 				7A323CDB299BB30800E61906 /* Endpoint.swift in Sources */,
 				7A43C27D299EB0CE00567700 /* Store.swift in Sources */,
+				7A2F9C6329BDE9C900F1F7D7 /* Localizations+Generated.swift in Sources */,
 				7A43C27F299EB12500567700 /* IconsRepository.swift in Sources */,
 				7A43C29D299EFC5C00567700 /* String.swift in Sources */,
 				7A43C288299EC84800567700 /* Environment.swift in Sources */,
@@ -523,13 +665,19 @@
 				7A43C27B299EB07300567700 /* AppPath.swift in Sources */,
 				7A323C9F299B940000E61906 /* Brawl_Stars_InsiderApp.swift in Sources */,
 				7A43C281299EC1D800567700 /* GetEventsResponse.swift in Sources */,
+				7A2F9C6729BDE9E500F1F7D7 /* Color+Generated.swift in Sources */,
+				7A2F9C6529BDE9D500F1F7D7 /* Image+Generated.swift in Sources */,
+				7A0C223529B28A4C001C9A19 /* View.swift in Sources */,
 				7A43C26E299E701000567700 /* BrawlifyEndpoint.swift in Sources */,
 				7A43C2AD299FC53E00567700 /* BrawlerItem.swift in Sources */,
+				7A2FC35D29BAB97A00FB920D /* Assets+Generated.swift in Sources */,
+				7A0C223D29B3F607001C9A19 /* Provider.swift in Sources */,
 				7A43C2A8299FC35B00567700 /* BrawlerStatView.swift in Sources */,
-				7A323CE6299BB69000E61906 /* MoyaProvider.swift in Sources */,
 				7A43C2B3299FC68000567700 /* BrawlerMock.swift in Sources */,
+				7A0C223B29B29204001C9A19 /* TabItem.swift in Sources */,
 				7A43C286299EC7F100567700 /* GameMode.swift in Sources */,
 				7A43C294299ECC1B00567700 /* EventsViewModel.swift in Sources */,
+				7A0C223829B29188001C9A19 /* PlaystationTabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,6 +712,18 @@
 			targetProxy = 7A323CB6299B940100E61906 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7A2FC35A29BAB76700FB920D /* Localizations.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7A2FC35929BAB76700FB920D /* en */,
+				7A2FC35B29BAB76A00FB920D /* pl */,
+			);
+			name = Localizations.plist;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7A323CBD299B940100E61906 /* Debug */ = {
@@ -616,6 +776,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -670,6 +831,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -691,11 +853,12 @@
 				DEVELOPMENT_TEAM = D7353U5P45;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -720,11 +883,12 @@
 				DEVELOPMENT_TEAM = D7353U5P45;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -856,6 +1020,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7A0C223E29B3F632001C9A19 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		7A43C276299E8ECB00567700 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -864,31 +1036,18 @@
 				minimumVersion = 7.0.0;
 			};
 		};
-		7A43C29E299FB16D00567700 /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 15.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7A0C223F29B3F632001C9A19 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A0C223E29B3F632001C9A19 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		7A43C277299E8ECB00567700 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7A43C276299E8ECB00567700 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
-		};
-		7A43C29F299FB16D00567700 /* CombineMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7A43C29E299FB16D00567700 /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = CombineMoya;
-		};
-		7A43C2A1299FB16D00567700 /* Moya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7A43C29E299FB16D00567700 /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

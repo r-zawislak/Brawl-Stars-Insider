@@ -8,12 +8,6 @@
 import Foundation
 
 extension JSONDecoder {
-    static var brawlStarsDecoder: JSONDecoder {
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(.basicDateTimeFormatter)
-        return decoder
-    }
-    
     static var brawlifyDecoder: JSONDecoder {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .formatted(.brawlifyDateFormatter)
