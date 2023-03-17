@@ -15,9 +15,17 @@ final class EventsViewModel: ObservableObject {
     private let provider = Provider<BrawlifyEndpoint>(decoder: .brawlifyDecoder)
     
     func fetchEvents() async throws {
-        events = try await provider.request(.getEvents, responseType: GetEventsResponse.self).active.filter {
+        guard events.isEmpty else {
+            return
+        }
+        
+        let events = try await provider.request(.getEvents, responseType: GetEventsResponse.self).active.filter {
             // Ignore challenges for now
             $0.slot.background == nil
+        }
+
+        DispatchQueue.main.async {
+            self.events = events
         }
     }
 }

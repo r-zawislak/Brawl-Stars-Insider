@@ -3,9 +3,9 @@
 import SwiftUI
 
 extension Image {
-    static let events = Asset.Images.events.image
-    static let maps = Asset.Images.maps.image
-    static let settings = Asset.Images.settings.image
+    static let events = Asset.Images.events.swiftUIImage
+    static let maps = Asset.Images.maps.swiftUIImage
+    static let settings = Asset.Images.settings.swiftUIImage
 }
 
 // swiftlint:enable all

@@ -11,7 +11,7 @@ import SwiftUI
 struct Brawl_Stars_InsiderApp: App {
     var body: some Scene {
         WindowGroup {
-            EventsView()
+            MainView()
                 .preferredColorScheme(.dark)
         }
     }

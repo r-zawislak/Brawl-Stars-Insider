@@ -13,20 +13,11 @@ struct BrawlerStatView: View {
     let icons = IconsRepository()
     
     @State private var brawler: Brawler?
-    
-    private var rarityColor: Color {
-        guard let hex = brawler?.rarity.color else {
-            return .clear
-        }
-        
-        return Color(hex: hex)
-    }
-    
     private let borderWidth: CGFloat = 2
     
     var body: some View {
         image
-            .overlay(overlay)
+            .overlay(winRateOverlay)
             .task {
                 brawler = try! await icons.getBrawler(id: stat.brawler)
             }
@@ -43,7 +34,19 @@ struct BrawlerStatView: View {
             )
     }
     
-    private var overlay: some View {
+    private var rarityColor: some ShapeStyle {
+        if brawler?.rarity.name == "Chromatic" {
+            return AnyShapeStyle(LinearGradient.chromatic)
+        } else {
+            guard let hex = brawler?.rarity.color else {
+                return AnyShapeStyle(.clear)
+            }
+
+            return AnyShapeStyle(Color(hex: hex))
+        }
+    }
+    
+    private var winRateOverlay: some View {
         GeometryReader { reader in
             HStack {
                 Spacer()
@@ -58,7 +61,7 @@ struct BrawlerStatView: View {
     private var winRate: some View {
         Text(String(format: "%.0f%%", stat.winRate))
             .bold()
-            .foregroundColor(rarityColor)
+            .foregroundStyle(rarityColor)
             .minimumScaleFactor(0.2)
             .padding(4)
             .background(
@@ -66,7 +69,8 @@ struct BrawlerStatView: View {
                     .foregroundColor(.secondaryBackground)
                     .overlay(
                         RoundedRectangle(cornerRadius: 8)
-                            .stroke(rarityColor, lineWidth: borderWidth)
+                            .stroke(lineWidth: borderWidth)
+                            .fill(rarityColor)
                     )
             )
     }
@@ -81,36 +85,5 @@ struct BrawlerStatView_Previews: PreviewProvider {
         }
         .preferredColorScheme(.dark)
         
-    }
-}
-
-struct CircleImageWithText: View {
-    var image: Image
-    var text: String
-    
-    var body: some View {
-        ZStack {
-            Circle()
-                .stroke(Color.white, lineWidth: 2)
-                .background(
-                    Circle()
-                        .fill(Color.white)
-                        .shadow(radius: 5)
-                )
-            image
-                .resizable()
-                .scaledToFit()
-                .clipShape(Circle())
-                .overlay(Circle().stroke(Color.white, lineWidth: 2))
-            Text(text)
-                .foregroundColor(.white)
-                .font(.system(size: 20, weight: .bold))
-                .padding()
-                .background(
-                    Circle()
-                        .fill(Color.white)
-                        .padding(5)
-                )
-        }
     }
 }

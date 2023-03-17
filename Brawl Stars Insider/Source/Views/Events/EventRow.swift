@@ -54,15 +54,15 @@ struct EventRow: View {
                 .scaledToFit()
                 .frame(width: 32, height: 32)
             VStack(alignment: .leading) {
-                Text(event.map.gameMode.name.uppercased())
+                headerText(event.map.gameMode.name.uppercased())
                     .bold()
-                Text(event.map.name)
+                headerText(event.map.name)
                     .font(.subheadline)
             }
             
             
             Spacer()
-            Text(viewModel.eventEndsInString)
+            headerText(viewModel.eventEndsInString)
                 .padding(.trailing, 8)
         }
         .padding([.top, .leading], 4)
@@ -88,6 +88,12 @@ struct EventRow: View {
             
         }
         .padding(8)
+    }
+    
+    private func headerText(_ string: String) -> some View {
+        Text(string)
+            .foregroundColor(.white)
+            .intenseShadow(color: .black.opacity(0.5), radius: 1, intensity: 4)
     }
 }
 

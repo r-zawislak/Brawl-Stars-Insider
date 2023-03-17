@@ -15,7 +15,7 @@ import SwiftUI
 {% macro extensionPropertiesBlock assets sp %}
 {{sp}}  {% for asset in assets %}
 {{sp}}  {% if asset.type == "image" %}
-{{sp}}  static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{enumName}}.Images.{{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}}.image
+{{sp}}  static let {{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{enumName}}.Images.{{asset.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}}.swiftUIImage
 {{sp}}  {% elif asset.items and ( forceNamespaces == "true" or asset.isNamespaced == "true" ) %}
 {{sp}}  {% elif asset.items %}
 {{sp}}  {% call extensionBlock asset.items sp %}

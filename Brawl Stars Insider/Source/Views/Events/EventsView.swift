@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EventsView: View {
-    @StateObject var viewModel = EventsViewModel()
+    @StateObject private var viewModel = EventsViewModel()
     
     private let localizations = Localizations.Events.self
     
@@ -42,7 +42,7 @@ struct EventsView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct EventsView_Previews: PreviewProvider {
     static var previews: some View {
         EventsView()
     }

@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>tabItems</key>
+	<dict>
+		<key>settings</key>
+		<string>Ustawienia</string>
+		<key>maps</key>
+		<string>Mapy</string>
+		<key>brawlers</key>
+		<string>Zadymiarze</string>
+		<key>events</key>
+		<string>Wydarzenia</string>
+	</dict>
 	<key>events</key>
 	<dict>
 		<key>row</key>

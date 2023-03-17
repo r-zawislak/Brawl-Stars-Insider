@@ -3,6 +3,7 @@
 import SwiftUI
 
 extension Color {
-    static let accentColor = Asset.Colors.accentColor.color
+    static let accentColor = Asset.Colors.accentColor.swiftUIColor
+    static let tabBarBackground = Asset.Colors.tabBarBackground.swiftUIColor
 }
 // swiftlint:enable all

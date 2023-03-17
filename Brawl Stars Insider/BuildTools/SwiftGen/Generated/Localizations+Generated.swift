@@ -33,6 +33,37 @@ internal enum Localizations {
               static var localized: String { "events.title".localized() }
           }
         }
+        internal enum TabItems {
+          static var key: String { return "tabItems" }
+          /*
+          Brawlers
+          */
+          internal enum Brawlers {
+              static var key: String { return "tabItems.brawlers" }
+              static var localized: String { "tabItems.brawlers".localized() }
+          }
+          /*
+          Events
+          */
+          internal enum Events {
+              static var key: String { return "tabItems.events" }
+              static var localized: String { "tabItems.events".localized() }
+          }
+          /*
+          Maps
+          */
+          internal enum Maps {
+              static var key: String { return "tabItems.maps" }
+              static var localized: String { "tabItems.maps".localized() }
+          }
+          /*
+          Settings
+          */
+          internal enum Settings {
+              static var key: String { return "tabItems.settings" }
+              static var localized: String { "tabItems.settings".localized() }
+          }
+        }
 }
 // swiftlint:enable all
 
