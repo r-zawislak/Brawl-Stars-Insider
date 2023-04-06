@@ -13,17 +13,16 @@ struct EventsView: View {
     private let localizations = Localizations.Events.self
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 Color.background
                     .ignoresSafeArea()
                 content
             }
             .navigationTitle(localizations.Title.localized)
-        }
-
-        .task {
-            try? await viewModel.fetchEvents()
+            .task {
+                try? await viewModel.fetchEvents()
+            }
         }
     }
     
@@ -34,7 +33,7 @@ struct EventsView: View {
     private var list: some View {
         ScrollView(.vertical) {
             LazyVStack {
-                ForEach(viewModel.events, id: \.map.id) {
+                ForEach(viewModel.events) {
                     EventRow(event: $0)
                 }
             }

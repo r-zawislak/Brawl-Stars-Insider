@@ -17,10 +17,10 @@ extension Brawler {
             path: .random(),
             released: .random(),
             version: 1,
-            link: URL(string: "https://cdn-old.brawlify.com/brawler-bs/Mandy.png")!,
-            imageUrl: URL(string: "https://cdn-old.brawlify.com/brawler-bs/Mandy.png")!,
-            imageUrl2: URL(string: "https://cdn-old.brawlify.com/brawler-bs/Mandy.png")!,
-            imageUrl3: URL(string: "https://cdn-old.brawlify.com/brawler-bs/Mandy.png")!,
+            link: .mock,
+            imageUrl: .mock,
+            imageUrl2: .mock,
+            imageUrl3: .mock,
             description: .random(),
             descriptionHtml: .random(),
             rarity: .mock,
@@ -40,7 +40,7 @@ extension Brawler.Item {
             version: 1,
             description: .random(),
             descriptionHtml: .random(),
-            imageUrl: URL(string: "https://cdn-old.brawlify.com/star-powers/Full.png")!,
+            imageUrl: .mock,
             released: .random()
         )
     }

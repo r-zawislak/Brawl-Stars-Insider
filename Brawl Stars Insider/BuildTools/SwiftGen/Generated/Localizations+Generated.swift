@@ -33,6 +33,16 @@ internal enum Localizations {
               static var localized: String { "events.title".localized() }
           }
         }
+        internal enum Maps {
+          static var key: String { return "maps" }
+          /*
+          Maps
+          */
+          internal enum Title {
+              static var key: String { return "maps.title" }
+              static var localized: String { "maps.title".localized() }
+          }
+        }
         internal enum TabItems {
           static var key: String { return "tabItems" }
           /*

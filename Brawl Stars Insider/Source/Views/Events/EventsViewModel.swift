@@ -10,12 +10,12 @@ import Foundation
 
 final class EventsViewModel: ObservableObject {
     
-    @Published var events: [Event] = []
+    @MainActor @Published var events: [Event] = []
     
-    private let provider = Provider<BrawlifyEndpoint>(decoder: .brawlifyDecoder)
+    @Dependency(\.brawlifyProvider) var provider
     
     func fetchEvents() async throws {
-        guard events.isEmpty else {
+        guard await events.isEmpty else {
             return
         }
         
@@ -24,7 +24,7 @@ final class EventsViewModel: ObservableObject {
             $0.slot.background == nil
         }
 
-        DispatchQueue.main.async {
+        await MainActor.run {
             self.events = events
         }
     }

@@ -41,18 +41,14 @@ final class EventRowViewModel: ObservableObject {
     }
     
     private func updateRecommendedBrawlers() {
-        let filteredStats = event.map.stats.filter { stat in
-            stat.winRate > filteredWinRates && stat.useRate > filteredUseRates
-        }
-        
         let weightSum = useRateWeight + winRateWeight
   
-        let sortedStats = filteredStats.sorted { lhs, rhs in
+        let sortedStats = event.map.stats?.sorted { lhs, rhs in
             let lhsWeight = lhs.useRate * useRateWeight + lhs.winRate * winRateWeight / weightSum
             let rhsWeight = rhs.useRate * useRateWeight + rhs.winRate * winRateWeight / weightSum
 
             return lhsWeight > rhsWeight
-        }
+        } ?? []
         
         let recommendedStatsCount = min(sortedStats.count, recommendedStatsCount)
         

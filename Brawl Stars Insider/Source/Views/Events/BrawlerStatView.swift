@@ -10,7 +10,8 @@ import Kingfisher
 
 struct BrawlerStatView: View {
     let stat: Event.Map.Stat
-    let icons = IconsRepository()
+    
+    @Dependency(\.iconsRepository) private  var repository
     
     @State private var brawler: Brawler?
     private let borderWidth: CGFloat = 2
@@ -19,7 +20,7 @@ struct BrawlerStatView: View {
         image
             .overlay(winRateOverlay)
             .task {
-                brawler = try! await icons.getBrawler(id: stat.brawler)
+                brawler = try! await repository.getBrawler(id: stat.brawler)
             }
     }
     
@@ -47,17 +48,12 @@ struct BrawlerStatView: View {
     }
     
     private var winRateOverlay: some View {
-        GeometryReader { reader in
-            HStack {
-                Spacer()
-                winRate
-                    .frame(height: 20)
-                    .padding(.top, -6)
-                Spacer()
-            }
-        }
+        winRate
+            .frame(height: 20)
+            .padding(.top, -6)
+            .frame(maxHeight: .infinity, alignment: .top)
     }
-    
+
     private var winRate: some View {
         Text(String(format: "%.0f%%", stat.winRate))
             .bold()
@@ -84,6 +80,5 @@ struct BrawlerStatView_Previews: PreviewProvider {
                 .frame(width: 128, height: 128)
         }
         .preferredColorScheme(.dark)
-        
     }
 }

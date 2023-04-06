@@ -49,7 +49,8 @@ extension Event.Map {
             credit: nil,
             stats: [.mock, .mock, .mock],
             environment: .mock,
-            gameMode: .mock
+            gameMode: .mock,
+            lastActive: nil
         )
     }
 }

@@ -55,7 +55,6 @@
 		7A43C298299EF2AB00567700 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C297299EF2AB00567700 /* Color.swift */; };
 		7A43C29B299EFB9900567700 /* EventMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C29A299EFB9900567700 /* EventMock.swift */; };
 		7A43C29D299EFC5C00567700 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C29C299EFC5C00567700 /* String.swift */; };
-		7A43C2A4299FB4B200567700 /* AnyPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2A3299FB4B200567700 /* AnyPublisher.swift */; };
 		7A43C2A8299FC35B00567700 /* BrawlerStatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2A7299FC35B00567700 /* BrawlerStatView.swift */; };
 		7A43C2AB299FC51E00567700 /* Brawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2AA299FC51E00567700 /* Brawler.swift */; };
 		7A43C2AD299FC53E00567700 /* BrawlerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2AC299FC53E00567700 /* BrawlerItem.swift */; };
@@ -65,12 +64,26 @@
 		7A43C2B5299FC6A900567700 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2B4299FC6A900567700 /* Int.swift */; };
 		7A43C2B9299FC8B200567700 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2B8299FC8B200567700 /* Icons.swift */; };
 		7A43C2BB299FD16600567700 /* EventRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43C2BA299FD16600567700 /* EventRowViewModel.swift */; };
-		7A82514929B27EAF00A792C9 /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82514829B27EAF00A792C9 /* MapsView.swift */; };
+		7A6A417529CCE5D100E4F28C /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A417429CCE5D100E4F28C /* DependencyProvider.swift */; };
+		7A6A417729CCE5E500E4F28C /* AppDependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A417629CCE5E500E4F28C /* AppDependencyProvider.swift */; };
+		7A6A417929CCE5FF00E4F28C /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A417829CCE5FF00E4F28C /* Dependency.swift */; };
+		7A6A417D29CCE7FC00E4F28C /* MockDependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6A417C29CCE7FC00E4F28C /* MockDependencyProvider.swift */; };
+		7A847E7F29D6F02B0049FE3D /* IconsRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A847E7E29D6F02B0049FE3D /* IconsRepositoryMock.swift */; };
+		7A847E8129D6F0550049FE3D /* PlayerIconMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A847E8029D6F0550049FE3D /* PlayerIconMock.swift */; };
+		7A847E8329D6F0E90049FE3D /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A847E8229D6F0E90049FE3D /* URL.swift */; };
+		7A847E8529D6F1DD0049FE3D /* ClubIconMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A847E8429D6F1DC0049FE3D /* ClubIconMock.swift */; };
 		7A90CC6629BE212700716A3F /* BrawlersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A90CC6529BE212700716A3F /* BrawlersView.swift */; };
 		7A90CC6929BE214900716A3F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A90CC6829BE214900716A3F /* SettingsView.swift */; };
 		7A90CC6C29BE243000716A3F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A90CC6B29BE243000716A3F /* MainView.swift */; };
 		7A90CC7229BE7CCD00716A3F /* TabBarShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A90CC7129BE7CCD00716A3F /* TabBarShape.swift */; };
 		7ACFE37D29C4D83500A873C7 /* LinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACFE37C29C4D83500A873C7 /* LinearGradient.swift */; };
+		7ACFE38429C768BF00A873C7 /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACFE38229C768BF00A873C7 /* MapsView.swift */; };
+		7ACFE38529C768BF00A873C7 /* MapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACFE38329C768BF00A873C7 /* MapsViewModel.swift */; };
+		7ACFE38929C86FD100A873C7 /* GameModeIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACFE38829C86FD100A873C7 /* GameModeIds.swift */; };
+		7AE6274429DB1BB100F72369 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE6274329DB1BB100F72369 /* TimeInterval.swift */; };
+		7AE6274629DB383800F72369 /* RoundedCornerShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE6274529DB383800F72369 /* RoundedCornerShape.swift */; };
+		7AE6274829DB388200F72369 /* UIRectCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE6274729DB388200F72369 /* UIRectCorner.swift */; };
+		7AE6274B29DD9AE400F72369 /* RectPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE6274A29DD9AE400F72369 /* RectPreferenceKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,7 +154,6 @@
 		7A43C297299EF2AB00567700 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		7A43C29A299EFB9900567700 /* EventMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMock.swift; sourceTree = "<group>"; };
 		7A43C29C299EFC5C00567700 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		7A43C2A3299FB4B200567700 /* AnyPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyPublisher.swift; sourceTree = "<group>"; };
 		7A43C2A7299FC35B00567700 /* BrawlerStatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrawlerStatView.swift; sourceTree = "<group>"; };
 		7A43C2AA299FC51E00567700 /* Brawler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brawler.swift; sourceTree = "<group>"; };
 		7A43C2AC299FC53E00567700 /* BrawlerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrawlerItem.swift; sourceTree = "<group>"; };
@@ -151,12 +163,26 @@
 		7A43C2B4299FC6A900567700 /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		7A43C2B8299FC8B200567700 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		7A43C2BA299FD16600567700 /* EventRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRowViewModel.swift; sourceTree = "<group>"; };
-		7A82514829B27EAF00A792C9 /* MapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
+		7A6A417429CCE5D100E4F28C /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
+		7A6A417629CCE5E500E4F28C /* AppDependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyProvider.swift; sourceTree = "<group>"; };
+		7A6A417829CCE5FF00E4F28C /* Dependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependency.swift; sourceTree = "<group>"; };
+		7A6A417C29CCE7FC00E4F28C /* MockDependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDependencyProvider.swift; sourceTree = "<group>"; };
+		7A847E7E29D6F02B0049FE3D /* IconsRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsRepositoryMock.swift; sourceTree = "<group>"; };
+		7A847E8029D6F0550049FE3D /* PlayerIconMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerIconMock.swift; sourceTree = "<group>"; };
+		7A847E8229D6F0E90049FE3D /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		7A847E8429D6F1DC0049FE3D /* ClubIconMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubIconMock.swift; sourceTree = "<group>"; };
 		7A90CC6529BE212700716A3F /* BrawlersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrawlersView.swift; sourceTree = "<group>"; };
 		7A90CC6829BE214900716A3F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7A90CC6B29BE243000716A3F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7A90CC7129BE7CCD00716A3F /* TabBarShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarShape.swift; sourceTree = "<group>"; };
 		7ACFE37C29C4D83500A873C7 /* LinearGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradient.swift; sourceTree = "<group>"; };
+		7ACFE38229C768BF00A873C7 /* MapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
+		7ACFE38329C768BF00A873C7 /* MapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewModel.swift; sourceTree = "<group>"; };
+		7ACFE38829C86FD100A873C7 /* GameModeIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeIds.swift; sourceTree = "<group>"; };
+		7AE6274329DB1BB100F72369 /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
+		7AE6274529DB383800F72369 /* RoundedCornerShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerShape.swift; sourceTree = "<group>"; };
+		7AE6274729DB388200F72369 /* UIRectCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRectCorner.swift; sourceTree = "<group>"; };
+		7AE6274A29DD9AE400F72369 /* RectPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectPreferenceKey.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +215,7 @@
 		7A0C223629B2914F001C9A19 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				7AE6274929DD9AAC00F72369 /* PropertyKeys */,
 				7A90CC7029BE7CC000716A3F /* Shapes */,
 				7A0C223929B291F8001C9A19 /* Curve Tab Bar */,
 			);
@@ -329,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				7A43C289299EC88500567700 /* Brawlify */,
+				7ACFE38829C86FD100A873C7 /* GameModeIds.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -348,6 +376,7 @@
 		7A323CDE299BB5CE00E61906 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				7A6A417329CCE5C700E4F28C /* DI */,
 				7A323CE0299BB5E400E61906 /* Logger.swift */,
 				7A43C27A299EB07300567700 /* AppPath.swift */,
 				7A43C27C299EB0CE00567700 /* Store.swift */,
@@ -376,9 +405,11 @@
 				7A323CF3299BD58400E61906 /* DateFormatter.swift */,
 				7A43C297299EF2AB00567700 /* Color.swift */,
 				7A43C29C299EFC5C00567700 /* String.swift */,
-				7A43C2A3299FB4B200567700 /* AnyPublisher.swift */,
 				7A43C2B4299FC6A900567700 /* Int.swift */,
 				7ACFE37C29C4D83500A873C7 /* LinearGradient.swift */,
+				7A847E8229D6F0E90049FE3D /* URL.swift */,
+				7AE6274329DB1BB100F72369 /* TimeInterval.swift */,
+				7AE6274729DB388200F72369 /* UIRectCorner.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -450,6 +481,9 @@
 			children = (
 				7A43C29A299EFB9900567700 /* EventMock.swift */,
 				7A43C2B2299FC68000567700 /* BrawlerMock.swift */,
+				7A847E7E29D6F02B0049FE3D /* IconsRepositoryMock.swift */,
+				7A847E8029D6F0550049FE3D /* PlayerIconMock.swift */,
+				7A847E8429D6F1DC0049FE3D /* ClubIconMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -465,10 +499,22 @@
 			path = "Get Brawlers";
 			sourceTree = "<group>";
 		};
+		7A6A417329CCE5C700E4F28C /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				7A6A417429CCE5D100E4F28C /* DependencyProvider.swift */,
+				7A6A417629CCE5E500E4F28C /* AppDependencyProvider.swift */,
+				7A6A417829CCE5FF00E4F28C /* Dependency.swift */,
+				7A6A417C29CCE7FC00E4F28C /* MockDependencyProvider.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		7A82514729B27EA700A792C9 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				7A82514829B27EAF00A792C9 /* MapsView.swift */,
+				7ACFE38229C768BF00A873C7 /* MapsView.swift */,
+				7ACFE38329C768BF00A873C7 /* MapsViewModel.swift */,
 			);
 			path = Maps;
 			sourceTree = "<group>";
@@ -501,8 +547,17 @@
 			isa = PBXGroup;
 			children = (
 				7A90CC7129BE7CCD00716A3F /* TabBarShape.swift */,
+				7AE6274529DB383800F72369 /* RoundedCornerShape.swift */,
 			);
 			path = Shapes;
+			sourceTree = "<group>";
+		};
+		7AE6274929DD9AAC00F72369 /* PropertyKeys */ = {
+			isa = PBXGroup;
+			children = (
+				7AE6274A29DD9AE400F72369 /* RectPreferenceKey.swift */,
+			);
+			path = PropertyKeys;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -574,7 +629,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					7A323C9A299B940000E61906 = {
 						CreatedOnToolsVersion = 14.2;
@@ -682,9 +737,7 @@
 				7A43C273299E790B00567700 /* ClubIcon.swift in Sources */,
 				7A43C283299EC7C400567700 /* Stat.swift in Sources */,
 				7A323CF4299BD58400E61906 /* DateFormatter.swift in Sources */,
-				7A82514929B27EAF00A792C9 /* MapsView.swift in Sources */,
 				7A323CA1299B940000E61906 /* EventsView.swift in Sources */,
-				7A43C2A4299FB4B200567700 /* AnyPublisher.swift in Sources */,
 				7A323CF2299BD55400E61906 /* JSONDecoder.swift in Sources */,
 				7A43C28D299EC8D800567700 /* Map.swift in Sources */,
 				7ACFE37D29C4D83500A873C7 /* LinearGradient.swift in Sources */,
@@ -695,22 +748,34 @@
 				7A43C27F299EB12500567700 /* IconsRepository.swift in Sources */,
 				7A43C29D299EFC5C00567700 /* String.swift in Sources */,
 				7A43C288299EC84800567700 /* Environment.swift in Sources */,
+				7AE6274829DB388200F72369 /* UIRectCorner.swift in Sources */,
+				7A6A417729CCE5E500E4F28C /* AppDependencyProvider.swift in Sources */,
 				7A323CE4299BB61D00E61906 /* Data.swift in Sources */,
+				7A6A417D29CCE7FC00E4F28C /* MockDependencyProvider.swift in Sources */,
 				7A43C29B299EFB9900567700 /* EventMock.swift in Sources */,
 				7A43C275299E79FF00567700 /* GetIconsResponse.swift in Sources */,
+				7A847E8129D6F0550049FE3D /* PlayerIconMock.swift in Sources */,
 				7A323CE1299BB5E400E61906 /* Logger.swift in Sources */,
 				7A43C2B9299FC8B200567700 /* Icons.swift in Sources */,
 				7A43C291299ECB2D00567700 /* Slot.swift in Sources */,
 				7A43C271299E790100567700 /* PlayerIcon.swift in Sources */,
 				7A43C2BB299FD16600567700 /* EventRowViewModel.swift in Sources */,
+				7AE6274429DB1BB100F72369 /* TimeInterval.swift in Sources */,
 				7A43C2B5299FC6A900567700 /* Int.swift in Sources */,
 				7A43C296299ED12400567700 /* EventRow.swift in Sources */,
+				7A6A417929CCE5FF00E4F28C /* Dependency.swift in Sources */,
+				7A847E7F29D6F02B0049FE3D /* IconsRepositoryMock.swift in Sources */,
 				7A43C2AF299FC5BE00567700 /* BrawlerRarity.swift in Sources */,
 				7A323CF0299BD27300E61906 /* ListResponse.swift in Sources */,
+				7ACFE38429C768BF00A873C7 /* MapsView.swift in Sources */,
+				7ACFE38929C86FD100A873C7 /* GameModeIds.swift in Sources */,
 				7A43C298299EF2AB00567700 /* Color.swift in Sources */,
+				7A847E8329D6F0E90049FE3D /* URL.swift in Sources */,
 				7A43C28F299ECB2000567700 /* Event.swift in Sources */,
 				7A43C2AB299FC51E00567700 /* Brawler.swift in Sources */,
 				7A43C2B1299FC5C700567700 /* BrawlerClass.swift in Sources */,
+				7AE6274B29DD9AE400F72369 /* RectPreferenceKey.swift in Sources */,
+				7A6A417529CCE5D100E4F28C /* DependencyProvider.swift in Sources */,
 				7A43C27B299EB07300567700 /* AppPath.swift in Sources */,
 				7A323C9F299B940000E61906 /* Brawl_Stars_InsiderApp.swift in Sources */,
 				7A90CC6629BE212700716A3F /* BrawlersView.swift in Sources */,
@@ -718,15 +783,18 @@
 				7A2F9C6729BDE9E500F1F7D7 /* Color+Generated.swift in Sources */,
 				7A90CC6C29BE243000716A3F /* MainView.swift in Sources */,
 				7A2F9C6529BDE9D500F1F7D7 /* Image+Generated.swift in Sources */,
+				7ACFE38529C768BF00A873C7 /* MapsViewModel.swift in Sources */,
 				7A0C223529B28A4C001C9A19 /* View.swift in Sources */,
 				7A43C26E299E701000567700 /* BrawlifyEndpoint.swift in Sources */,
 				7A43C2AD299FC53E00567700 /* BrawlerItem.swift in Sources */,
+				7A847E8529D6F1DD0049FE3D /* ClubIconMock.swift in Sources */,
 				7A2FC35D29BAB97A00FB920D /* Assets+Generated.swift in Sources */,
 				7A0C223D29B3F607001C9A19 /* Provider.swift in Sources */,
 				7A43C2A8299FC35B00567700 /* BrawlerStatView.swift in Sources */,
 				7A43C2B3299FC68000567700 /* BrawlerMock.swift in Sources */,
 				7A0C223B29B29204001C9A19 /* TabItem.swift in Sources */,
 				7A43C286299EC7F100567700 /* GameMode.swift in Sources */,
+				7AE6274629DB383800F72369 /* RoundedCornerShape.swift in Sources */,
 				7A43C294299ECC1B00567700 /* EventsViewModel.swift in Sources */,
 				7A90CC7229BE7CCD00716A3F /* TabBarShape.swift in Sources */,
 				7A0C223829B29188001C9A19 /* CurveTabBar.swift in Sources */,
@@ -782,6 +850,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -843,6 +912,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

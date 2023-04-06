@@ -8,7 +8,7 @@
 import Foundation
 
 extension Event {
-    struct Map: Codable {
+    struct Map: Codable, Identifiable {
         let id: Int
         let new: Bool
         let disabled: Bool
@@ -18,8 +18,9 @@ extension Event {
         let link: URL
         let imageUrl: URL
         let credit: String?
-        let stats: [Stat]
+        let stats: [Stat]?
         let environment: Environment
         let gameMode: GameMode
+        let lastActive: TimeInterval?
     }
 }

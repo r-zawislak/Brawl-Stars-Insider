@@ -10,36 +10,38 @@ import SwiftUI
 struct MainView: View {
     
     @State private var activeTab: TabItem = .events
-    private let eventsView = EventsView()
-    private let mapsView = MapsView()
-    private let brawlersView = BrawlersView()
-    private let settingsView = SettingsView()
     
     var body: some View {
         ZStack {
-            tabItemView
-            
-            VStack {
-                Spacer()
-                
-                CurveTabBar(activeTab: $activeTab)
-            }
-            .ignoresSafeArea(.all, edges: .bottom)
+            tabView
+            tabBar
+        }
+    }
+
+    private var tabView: some View {
+        TabView(selection: $activeTab) {
+            EventsView()
+                .tag(TabItem.events)
+                .toolbar(.hidden, for: .tabBar)
+            MapsView()
+                .tag(TabItem.maps)
+                .toolbar(.hidden, for: .tabBar)
+            BrawlersView()
+                .tag(TabItem.brawlers)
+                .toolbar(.hidden, for: .tabBar)
+            SettingsView()
+                .tag(TabItem.settings)
+                .toolbar(.hidden, for: .tabBar)
         }
     }
     
-    @ViewBuilder
-    private var tabItemView: some View {
-        switch activeTab {
-        case .events:
-            eventsView
-        case .maps:
-            mapsView
-        case .brawlers:
-            brawlersView
-        case .settings:
-            settingsView
+    private var tabBar: some View {
+        VStack {
+            Spacer()
+            
+            CurveTabBar(activeTab: $activeTab)
         }
+        .ignoresSafeArea(.all, edges: .bottom)
     }
 }
 

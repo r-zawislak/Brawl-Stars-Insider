@@ -93,7 +93,7 @@ struct EventRow: View {
     private func headerText(_ string: String) -> some View {
         Text(string)
             .foregroundColor(.white)
-            .intenseShadow(color: .black.opacity(0.5), radius: 1, intensity: 4)
+            .intenseShadow(color: .black, radius: 1, intensity: 4)
     }
 }
 

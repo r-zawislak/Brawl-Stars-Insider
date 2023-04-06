@@ -61,8 +61,8 @@ struct CurveTabBar: View {
     }
     
     private var bottomOverlay: some View {
-        GeometryReader { reader in
-            let frame = reader.frame(in: .global)
+        GeometryReader { geo in
+            let frame = geo.frame(in: .global)
             let frameWidth = frame.width
             let circleDiameter = frameWidth * 4.2
             let tabWidth = frameWidth / CGFloat(TabItem.allCases.count)
@@ -71,7 +71,7 @@ struct CurveTabBar: View {
             
             if bottomSafeArea == 0 {
                 DispatchQueue.main.async {
-                    bottomSafeArea = reader.safeAreaInsets.bottom
+                    bottomSafeArea = geo.safeAreaInsets.bottom
                 }
             }
             

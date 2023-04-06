@@ -8,7 +8,7 @@
 import Foundation
 
 extension Event.Map {
-    struct GameMode: Codable {
+    struct GameMode: Codable, Hashable, Identifiable {
         let id: Int
         let name: String
         let hash: String
@@ -17,6 +17,9 @@ extension Event.Map {
         let bgColor: String
         let link: URL
         let imageUrl: URL
+        
+        func hash(into hasher: inout Hasher) {
+            hasher.combine(hash)
+        }
     }
-    
 }

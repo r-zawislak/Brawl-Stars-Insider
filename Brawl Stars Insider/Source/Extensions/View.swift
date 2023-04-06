@@ -17,5 +17,41 @@ extension View {
         
         return view
     }
+    
+    func animationEnd<Value: VectorArithmetic>(of value: Value, onEnd: @escaping () -> Void) -> some View {
+        self
+            .modifier(EndAnimationModifier(value: value, onEndAnimation: onEnd))
+    }
+}
+
+private struct EndAnimationModifier<Value: VectorArithmetic>: Animatable, ViewModifier {
+    
+    var animatableData: Value {
+        didSet {
+            checkIfFinished()
+        }
+    }
+    
+    let endValue: Value
+    var onEndAnimation: () -> Void
+    
+    func body(content: Content) -> some View {
+        content
+    }
+    
+    init(value: Value, onEndAnimation: @escaping () -> Void) {
+        animatableData = value
+        endValue = value
+        
+        self.onEndAnimation = onEndAnimation
+    }
+    
+    private func checkIfFinished() {
+        guard animatableData == endValue else { return }
+        
+        DispatchQueue.main.async {
+            onEndAnimation()
+        }
+    }
 }
 

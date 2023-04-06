@@ -17,8 +17,11 @@ struct Brawler: Codable {
     let released: Bool
     let version: Int
     let link: URL
+    /// Image with black border
     let imageUrl: URL
+    /// Image without border
     let imageUrl2: URL
+    /// Brawler emoji
     let imageUrl3: URL
     let description: String
     let descriptionHtml: String
