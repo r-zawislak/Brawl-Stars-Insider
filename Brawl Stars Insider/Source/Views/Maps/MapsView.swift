@@ -22,6 +22,9 @@ struct MapsView: View {
     
     /// 1.0 is value if tab was tapped
     @State private var animationProgress = 0.0
+    
+    @State private var yTabOffset = 0.0
+    @State private var tabBarHeight = 0.0
 
     var body: some View {
         NavigationStack {
@@ -42,18 +45,21 @@ struct MapsView: View {
     private var content: some View {
         ScrollViewReader { proxy in
             ScrollView(.vertical, showsIndicators: false) {
-                LazyVStack(spacing: 16, pinnedViews: .sectionHeaders) {
-                    Section(
-                        content: {
-                            ForEach(viewModel.gameModes) {
-                                section(for: $0)
-                            }
-                        },
-                        header: {
-                            tabsHeader(proxy: proxy)
-                        }
-                    )
+                VStack {
+                    ForEach(viewModel.gameModes) {
+                        section(for: $0)
+                    }
                 }
+                .rect(in: .named(scrollViewCoordinateSpaceName)) { rect in
+                    yTabOffset = rect.minY - tabBarHeight
+                }
+            }
+            .rect(in: .named(scrollViewCoordinateSpaceName)) { rect in
+                tabBarHeight = rect.minY
+            }
+            .safeAreaInset(edge: .top) {
+                tabsHeader(proxy: proxy)
+                    .offset(y: yTabOffset > 0 ? yTabOffset : 0)
             }
             .coordinateSpace(name: scrollViewCoordinateSpaceName)
         }
