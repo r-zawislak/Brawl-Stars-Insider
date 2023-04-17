@@ -50,8 +50,8 @@ struct CurveTabBar: View {
                 tab.image
                     .resizable()
                     .aspectRatio(contentMode: .fit)
+                    .frame(height: 25)
                     .frame(maxWidth: .infinity)
-                    .frame(height: 35)
                     .offset(y: -yOffset(for: tab))
                     .onTapGesture {
                         activeTab = tab

@@ -76,6 +76,10 @@
 		7A90CC6929BE214900716A3F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A90CC6829BE214900716A3F /* SettingsView.swift */; };
 		7A90CC6C29BE243000716A3F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A90CC6B29BE243000716A3F /* MainView.swift */; };
 		7A90CC7229BE7CCD00716A3F /* TabBarShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A90CC7129BE7CCD00716A3F /* TabBarShape.swift */; };
+		7A9334C429E97D9B006C4EE1 /* MapDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9334C229E97D9B006C4EE1 /* MapDetailsView.swift */; };
+		7A9334C529E97D9B006C4EE1 /* MapDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9334C329E97D9B006C4EE1 /* MapDetailsViewModel.swift */; };
+		7A94FE9D29EC9D82004BAA78 /* StatsSorter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A94FE9C29EC9D82004BAA78 /* StatsSorter.swift */; };
+		7A963AF629EDDDF000B24566 /* app.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7A963AF529EDDDF000B24566 /* app.gif */; };
 		7ACFE37D29C4D83500A873C7 /* LinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACFE37C29C4D83500A873C7 /* LinearGradient.swift */; };
 		7ACFE38429C768BF00A873C7 /* MapsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACFE38229C768BF00A873C7 /* MapsView.swift */; };
 		7ACFE38529C768BF00A873C7 /* MapsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ACFE38329C768BF00A873C7 /* MapsViewModel.swift */; };
@@ -175,6 +179,10 @@
 		7A90CC6829BE214900716A3F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		7A90CC6B29BE243000716A3F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7A90CC7129BE7CCD00716A3F /* TabBarShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarShape.swift; sourceTree = "<group>"; };
+		7A9334C229E97D9B006C4EE1 /* MapDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailsView.swift; sourceTree = "<group>"; };
+		7A9334C329E97D9B006C4EE1 /* MapDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailsViewModel.swift; sourceTree = "<group>"; };
+		7A94FE9C29EC9D82004BAA78 /* StatsSorter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsSorter.swift; sourceTree = "<group>"; };
+		7A963AF529EDDDF000B24566 /* app.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = app.gif; sourceTree = "<group>"; };
 		7ACFE37C29C4D83500A873C7 /* LinearGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearGradient.swift; sourceTree = "<group>"; };
 		7ACFE38229C768BF00A873C7 /* MapsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsView.swift; sourceTree = "<group>"; };
 		7ACFE38329C768BF00A873C7 /* MapsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsViewModel.swift; sourceTree = "<group>"; };
@@ -273,6 +281,7 @@
 		7A2FC35129BAABDB00FB920D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7A963AF029EDD18D00B24566 /* Readme */,
 				7A323CA2299B940100E61906 /* Images.xcassets */,
 				7A2FC35A29BAB76700FB920D /* Localizations.plist */,
 				7A2FC35529BAABFA00FB920D /* Colors.xcassets */,
@@ -380,6 +389,7 @@
 				7A323CE0299BB5E400E61906 /* Logger.swift */,
 				7A43C27A299EB07300567700 /* AppPath.swift */,
 				7A43C27C299EB0CE00567700 /* Store.swift */,
+				7A94FE9C29EC9D82004BAA78 /* StatsSorter.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -513,6 +523,7 @@
 		7A82514729B27EA700A792C9 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
+				7A9334C129E97D89006C4EE1 /* Details */,
 				7ACFE38229C768BF00A873C7 /* MapsView.swift */,
 				7ACFE38329C768BF00A873C7 /* MapsViewModel.swift */,
 			);
@@ -550,6 +561,23 @@
 				7AE6274529DB383800F72369 /* RoundedCornerShape.swift */,
 			);
 			path = Shapes;
+			sourceTree = "<group>";
+		};
+		7A9334C129E97D89006C4EE1 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				7A9334C229E97D9B006C4EE1 /* MapDetailsView.swift */,
+				7A9334C329E97D9B006C4EE1 /* MapDetailsViewModel.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		7A963AF029EDD18D00B24566 /* Readme */ = {
+			isa = PBXGroup;
+			children = (
+				7A963AF529EDDDF000B24566 /* app.gif */,
+			);
+			path = Readme;
 			sourceTree = "<group>";
 		};
 		7AE6274929DD9AAC00F72369 /* PropertyKeys */ = {
@@ -677,6 +705,7 @@
 				7A323CA6299B940100E61906 /* Preview Assets.xcassets in Resources */,
 				7A2FC35829BAB76700FB920D /* Localizations.plist in Resources */,
 				7A2FC35029BAAB3F00FB920D /* swiftgen.yml in Resources */,
+				7A963AF629EDDDF000B24566 /* app.gif in Resources */,
 				7A2FC35629BAABFA00FB920D /* Colors.xcassets in Resources */,
 				7A2FC34F29BAAB3F00FB920D /* Localizations.stencil in Resources */,
 				7A2FC34D29BAAB3F00FB920D /* Color.stencil in Resources */,
@@ -746,6 +775,8 @@
 				7A43C27D299EB0CE00567700 /* Store.swift in Sources */,
 				7A2F9C6329BDE9C900F1F7D7 /* Localizations+Generated.swift in Sources */,
 				7A43C27F299EB12500567700 /* IconsRepository.swift in Sources */,
+				7A9334C529E97D9B006C4EE1 /* MapDetailsViewModel.swift in Sources */,
+				7A9334C429E97D9B006C4EE1 /* MapDetailsView.swift in Sources */,
 				7A43C29D299EFC5C00567700 /* String.swift in Sources */,
 				7A43C288299EC84800567700 /* Environment.swift in Sources */,
 				7AE6274829DB388200F72369 /* UIRectCorner.swift in Sources */,
@@ -797,6 +828,7 @@
 				7AE6274629DB383800F72369 /* RoundedCornerShape.swift in Sources */,
 				7A43C294299ECC1B00567700 /* EventsViewModel.swift in Sources */,
 				7A90CC7229BE7CCD00716A3F /* TabBarShape.swift in Sources */,
+				7A94FE9D29EC9D82004BAA78 /* StatsSorter.swift in Sources */,
 				7A0C223829B29188001C9A19 /* CurveTabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

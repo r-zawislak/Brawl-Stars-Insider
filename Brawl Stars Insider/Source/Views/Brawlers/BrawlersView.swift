@@ -10,6 +10,7 @@ import SwiftUI
 struct BrawlersView: View {
     var body: some View {
         Text("Hello, World!")
+            .toolbar(.hidden, for: .tabBar)
     }
 }
 

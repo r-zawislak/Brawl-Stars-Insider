@@ -79,7 +79,7 @@ struct EventRow: View {
             Text(localizations.Recommended.localized)
                 .bold()
             HStack(spacing: 16) {
-                ForEach(viewModel.recommended, id: \.brawler) {
+                ForEach(viewModel.recommended) {
                     BrawlerStatView(stat: $0)
                 }
                 

@@ -12,10 +12,6 @@ final class EventRowViewModel: ObservableObject {
     @Published var recommended: [Event.Map.Stat] = []
     @Published var eventEndsInString = ""
     
-    private let filteredWinRates = 50.0
-    private let filteredUseRates = 2.0
-    private let winRateWeight = 0.1
-    private let useRateWeight = 0.9
     private let recommendedStatsCount = 5
     private let event: Event
     private var timeToEndEvent: TimeInterval
@@ -41,17 +37,6 @@ final class EventRowViewModel: ObservableObject {
     }
     
     private func updateRecommendedBrawlers() {
-        let weightSum = useRateWeight + winRateWeight
-  
-        let sortedStats = event.map.stats?.sorted { lhs, rhs in
-            let lhsWeight = lhs.useRate * useRateWeight + lhs.winRate * winRateWeight / weightSum
-            let rhsWeight = rhs.useRate * useRateWeight + rhs.winRate * winRateWeight / weightSum
-
-            return lhsWeight > rhsWeight
-        } ?? []
-        
-        let recommendedStatsCount = min(sortedStats.count, recommendedStatsCount)
-        
-        recommended = Array(sortedStats.prefix(recommendedStatsCount))
+        recommended = StatsSorter().sortedStats(event.map.stats ?? [], maxCount: recommendedStatsCount)
     }
 }

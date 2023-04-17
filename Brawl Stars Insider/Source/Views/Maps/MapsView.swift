@@ -22,9 +22,9 @@ struct MapsView: View {
     
     /// 1.0 is value if tab was tapped
     @State private var animationProgress = 0.0
-    
     @State private var yTabOffset = 0.0
     @State private var tabBarHeight = 0.0
+    @State private var selectedMap: Event.Map?
 
     var body: some View {
         NavigationStack {
@@ -104,6 +104,9 @@ struct MapsView: View {
         ) {
             ForEach(maps) { map in
                 mapItem(map: map)
+                    .onTapGesture {
+                        selectedMap = map
+                    }
             }
         }
     }
@@ -116,16 +119,7 @@ struct MapsView: View {
             Text(map.name)
         }
     }
-    
-//    private var indicator: some View {
-//        Capsule()
-//            .fill(.white)
-//            .padding(.horizontal, tabItemHorizontalPadding)
-//            .frame(height: 4)
-//            .offset(y: 8 + tabItemVerticalPadding)
-//            .matchedGeometryEffect(id: indicatorID, in: indicatorAnimation)
-//    }
-    
+
     private func indicator(for gameMode: Event.Map.GameMode) -> some View {
         RoundedRectangle(cornerRadius: 8)
             .padding(.vertical, tabItemVerticalPadding / 1.5)

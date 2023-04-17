@@ -8,9 +8,13 @@
 import Foundation
 
 extension Event.Map {
-    struct Stat: Codable {
+    struct Stat: Codable, Identifiable {
         let brawler: Int
         let winRate: CGFloat
         let useRate: CGFloat
+        
+        var id: Int {
+            brawler
+        }
     }
 }

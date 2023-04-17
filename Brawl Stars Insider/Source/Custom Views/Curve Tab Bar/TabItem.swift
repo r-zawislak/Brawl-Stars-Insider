@@ -17,13 +17,13 @@ enum TabItem: Int, CaseIterable {
     var image: Image {
         switch self {
         case .events:
-            return .events
+            return Image(systemName: "calendar")
         case .brawlers:
-            return .events
+            return Image(systemName: "person.3.sequence")
         case .maps:
-            return .maps
+            return Image(systemName: "map")
         case .settings:
-            return .settings
+            return Image(systemName: "gearshape")
         }
     }
     
