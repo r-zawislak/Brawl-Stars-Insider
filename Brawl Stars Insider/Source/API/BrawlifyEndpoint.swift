@@ -14,6 +14,7 @@ enum BrawlifyEndpoint: Endpoint {
     case getBrawler(id: Int)
     case getAllBrawlers
     case getMaps
+    case getMapDetails(id: Int)
     
     var path: String {
         switch self {
@@ -25,6 +26,8 @@ enum BrawlifyEndpoint: Endpoint {
             return "/brawlers/\(id)"
         case .getAllBrawlers:
             return "/brawlers"
+        case .getMapDetails(let id):
+            return "/maps/\(id)"
         case .getMaps:
             return "/maps"
         }
@@ -37,6 +40,9 @@ enum BrawlifyEndpoint: Endpoint {
             let maps: [Event.Map] = [.mock, .mock, .mock]
             let listResponse = ListResponse(list: maps)
             return try? JSONEncoder().encode(listResponse)
+        case .getMapDetails:
+            let map = Event.Map.mock
+            return try? JSONEncoder().encode(map)
         default:
             return nil
         }

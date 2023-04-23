@@ -19,25 +19,38 @@ struct MapsView: View {
     private let scrollViewCoordinateSpaceName = "scrollView"
     
     @Namespace private var indicatorAnimation
+    @Namespace private var mapAnimation
     
     /// 1.0 is value if tab was tapped
     @State private var animationProgress = 0.0
     @State private var yTabOffset = 0.0
     @State private var tabBarHeight = 0.0
     @State private var selectedMap: Event.Map?
+    @State private var showMapDetails = false
 
     var body: some View {
         NavigationStack {
             content
-                .navigationTitle(localizations.Title.localized)
+                .navigationTitle(showMapDetails ? selectedMap?.name ?? "" : localizations.Title.localized)
+                .navigationBarTitleDisplayMode(showMapDetails ? .inline : .large)
                 .toolbarBackground(.visible, for: .navigationBar)
                 .toolbarBackground(Color.secondaryBackground, for: .navigationBar)
                 .toolbarColorScheme(.dark, for: .navigationBar)
+                .toolbar(content: {
+                    if showMapDetails {
+                        detailsBackButton
+                    }
+                })
                 .task {
                     try? await viewModel.fetchMaps()
                 }
                 .animationEnd(of: animationProgress) {
                     animationProgress = 0
+                }
+                .overlay {
+                    if let selectedMap, showMapDetails {
+                        MapDetailsView(map: selectedMap, animation: mapAnimation, show: $showMapDetails)
+                    }
                 }
         }
     }
@@ -65,16 +78,29 @@ struct MapsView: View {
         }
     }
     
-    private func section(for gameMode: Event.Map.GameMode) -> some View {
-        VStack {
-            gameModeView(gameMode: gameMode)
-                .font(.title)
-                .fontWeight(.semibold)
-                .frame(height: sectionTitleHeight)
-                .frame(maxWidth: .infinity, alignment: .leading)
-
-            grid(for: viewModel.mapsForGameMode[gameMode] ?? [])
+    private var detailsBackButton: some ToolbarContent {
+        ToolbarItem(placement: .navigationBarLeading) {
+            Button(
+                action: {
+                    withAnimation {
+                        showMapDetails = false
+                    }
+                },
+                label: {
+                    Image(systemName: "chevron.left")
+                }
+            )
         }
+    }
+    
+    private func section(for gameMode: Event.Map.GameMode) -> some View {
+        GameModeSection(
+            gameMode: gameMode,
+            gameModeMaps: viewModel.mapsForGameMode[gameMode] ?? [],
+            sectionTitleHeight: sectionTitleHeight,
+            animation: mapAnimation,
+            onMapTapped: onMapTapped
+        )
         .id(viewModel.sectionID(for: gameMode))
         .rect(in: .named(scrollViewCoordinateSpaceName)) { rect in
             let wasTabTapped = animationProgress == 1
@@ -86,37 +112,6 @@ struct MapsView: View {
             withAnimation {
                 viewModel.activeGameMode = gameMode
             }
-        }
-        .padding()
-        .background(
-            RoundedRectangle(cornerRadius: 16)
-                .foregroundColor(.secondaryBackground)
-        )
-    }
-    
-    private func grid(for maps: [Event.Map]) -> some View {
-        LazyVGrid(
-            columns: [
-                GridItem(.flexible(), spacing: 16),
-                GridItem(.flexible(), spacing: 16),
-            ],
-            spacing: 16
-        ) {
-            ForEach(maps) { map in
-                mapItem(map: map)
-                    .onTapGesture {
-                        selectedMap = map
-                    }
-            }
-        }
-    }
-    
-    private func mapItem(map: Event.Map) -> some View {
-        VStack {
-            KFImage(map.imageUrl)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-            Text(map.name)
         }
     }
 
@@ -131,7 +126,7 @@ struct MapsView: View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
                 ForEach(viewModel.gameModes) { gameMode in
-                    gameModeView(gameMode: gameMode)
+                    GameModeView(gameMode: gameMode)
                         .frame(height: 24)
                         .padding(.horizontal, tabItemHorizontalPadding)
                         .padding(.vertical, tabItemVerticalPadding)
@@ -145,7 +140,7 @@ struct MapsView: View {
                             withAnimation {
                                 animationProgress = 1
                                 viewModel.activeGameMode = gameMode
-                                proxy.scrollTo(gameMode, anchor: .top)
+                                proxy.scrollTo(viewModel.sectionID(for: gameMode), anchor: .top)
                             }
                         }
                 }
@@ -160,13 +155,13 @@ struct MapsView: View {
         }
     }
     
-    private func gameModeView(gameMode: Event.Map.GameMode) -> some View {
-        HStack {
-            KFImage(gameMode.imageUrl)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-            Text(gameMode.name)
-                .foregroundColor(.white)
+    // MARK: - Actions
+    
+    private func onMapTapped(map: Event.Map) {
+        selectedMap = map
+        
+        withAnimation {
+            showMapDetails = true
         }
     }
 }

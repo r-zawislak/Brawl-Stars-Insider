@@ -22,6 +22,16 @@ extension View {
         self
             .modifier(EndAnimationModifier(value: value, onEndAnimation: onEnd))
     }
+    
+    // MARK: - Alignment
+    
+    func horizontalAlignment(_ alignment: HorizontalAlignment) -> some View {
+        frame(maxWidth: .infinity, alignment: Alignment(horizontal: alignment, vertical: .center))
+    }
+    
+    func verticalAlignment(_ alignment: VerticalAlignment) -> some View {
+        frame(maxHeight: .infinity, alignment: Alignment(horizontal: .center, vertical: alignment))
+    }
 }
 
 private struct EndAnimationModifier<Value: VectorArithmetic>: Animatable, ViewModifier {

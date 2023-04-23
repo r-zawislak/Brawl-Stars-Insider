@@ -47,7 +47,7 @@ extension Event.Map {
             link: URL(string: "https://cdn-old.brawlify.com/gamemode/header/Duo-Showdown.png")!,
             imageUrl: URL(string: "https://cdn-old.brawlify.com/map/15000108.png")!,
             credit: nil,
-            stats: [.mock, .mock, .mock],
+            stats: (0...30).map { _ in Event.Map.Stat.mock },
             environment: .mock,
             gameMode: .mock,
             lastActive: nil

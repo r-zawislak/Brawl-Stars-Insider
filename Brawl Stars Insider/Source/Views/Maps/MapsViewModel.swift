@@ -15,6 +15,7 @@ final class MapsViewModel: ObservableObject {
     @MainActor @Published var activeGameMode: Event.Map.GameMode = .mock
     
     @Dependency(\.brawlifyProvider) private var provider
+    
     private let desiredOrder: [GameModeIds] = [.solo, .duo, .gemGrab, .brawlBall, .heist, .hotZone, .bounty, .knockout, .basketBrawl, .duels, .wipeout, .snowtelThieves]
     
     func fetchMaps() async throws {

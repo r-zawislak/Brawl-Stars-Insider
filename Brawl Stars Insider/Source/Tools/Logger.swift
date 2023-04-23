@@ -86,8 +86,4 @@ extension Logger: EventMonitor {
             "Body:\n\(response.data?.formattedJSONString ?? "No body")",
         ]
     }
-
-    private func errorResponseItems(error: AFError) -> [String] {
-        return ["Response Error \(String(describing: error.errorDescription))"]
-    }
 }

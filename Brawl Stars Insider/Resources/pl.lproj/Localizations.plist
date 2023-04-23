@@ -4,6 +4,11 @@
 <dict>
 	<key>maps</key>
 	<dict>
+		<key>details</key>
+		<dict>
+			<key>brawlers</key>
+			<string>Zadymiarze</string>
+		</dict>
 		<key>title</key>
 		<string>Mapy</string>
 	</dict>

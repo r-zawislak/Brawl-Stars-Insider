@@ -9,11 +9,20 @@ import Combine
 
 final class MapDetailsViewModel: ObservableObject {
     let map: Event.Map
-    let stats: [Event.Map.Stat]
+    
+    @MainActor @Published var stats: [Event.Map.Stat] = []
+    
+    @Dependency(\.brawlifyProvider) var provider
     
     init(map: Event.Map) {
         self.map = map
+    }
+    
+    func fetchDetails() async throws {
+        let map = try await provider.request(.getMapDetails(id: map.id), responseType: Event.Map.self)
         
-        stats = StatsSorter().sortedStats(map.stats ?? [])
+        await MainActor.run {
+            stats = StatsSorter().sortedStats(map.stats ?? [])
+        }
     }
 }

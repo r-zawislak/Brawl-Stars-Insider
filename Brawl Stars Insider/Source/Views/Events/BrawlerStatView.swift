@@ -51,7 +51,7 @@ struct BrawlerStatView: View {
         winRate
             .frame(height: 20)
             .padding(.top, -6)
-            .frame(maxHeight: .infinity, alignment: .top)
+            .verticalAlignment(.top)
     }
 
     private var winRate: some View {

@@ -35,6 +35,16 @@ internal enum Localizations {
         }
         internal enum Maps {
           static var key: String { return "maps" }
+          internal enum Details {
+            static var key: String { return "maps.details" }
+            /*
+            Brawlers
+            */
+            internal enum Brawlers {
+                static var key: String { return "maps.details.brawlers" }
+                static var localized: String { "maps.details.brawlers".localized() }
+            }
+          }
           /*
           Maps
           */
